@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+ 
+
+</head>
+<body>
+    @RenderBody()
+    @Scripts.Render("~/bundles/Scripts")
+    @Scripts.Render("~/bundles/vue")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
