@@ -1,0 +1,267 @@
+﻿<style>
+    body {
+        overflow: hidden;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    #homeVisible, #homeVisible .block, #homeVisible .md-content {
+        background-color: #FFC107;
+    }
+
+    #funcVisible, #funcVisible .block, #funcVisible .md-content {
+        /*background-color: #FFC107;*/
+    }
+
+    .use-flexbox{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+ 
+</style>
+<div class="page-container" id="MyApp">
+    <div id="content">
+        <div class="block" id="homeVisible">
+            <md-content>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center"><img src="~/Images/logo.png" width="350" /></div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">
+                        <h1>Egg Data</h1>
+                        <strong> </strong>
+                    </div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">
+                        <md-button class="md-raised md-primary" v-on:click="GOBtn">GO</md-button>
+                    </div>
+                </div>
+            </md-content>
+        </div>
+        <div class="block use-flexbox" id="funcVisible">
+            <md-content>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">
+                        <i class="fas fa-file-alt fa-10x"></i>
+                    </div>
+                    <div class="md-layout-item center">
+                        <i class="fab fa-linux fa-10x"></i>
+                    </div>
+                    <div class="md-layout-item center">
+                        <i class="fas fa-film fa-10x"></i>
+                    </div>
+                    <div class="md-layout-item center">
+                        <i class="fab fa-line fa-10x"></i>
+                    </div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">蛋蛋檢測區</div>
+                    <div class="md-layout-item center">蛋蛋長知識</div>
+                    <div class="md-layout-item center">蛋蛋大事件</div>
+                    <div class="md-layout-item center">蛋蛋Bot</div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">測試你的蛋蛋健不健康</div>
+                    <div class="md-layout-item center">蛋蛋汁多少，你對你的雞蛋了解嗎?</div>
+                    <div class="md-layout-item center">蛋蛋的一生，以台灣新聞為例</div>
+                    <div class="md-layout-item center">LineBot，告訴你蛋蛋234</div>
+                </div>
+            </md-content>
+        </div>
+        <div class="block" id="testVisible">
+            <md-toolbar class="md-primary">
+                <md-button class="md-icon-button" v-on:click="showNavigation = true">
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <span class="md-title">My Title</span>
+
+                <div class="md-toolbar-section-end">
+                    <md-button v-on:click="showSidepanel = true">Favorites</md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <p v-for="i in 5">
+                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
+                </p>
+            </md-content>
+        </div>
+        <div class="block" id="infoVisible">
+            <md-toolbar class="md-primary" md-theme="purple_theme">
+                <md-button class="md-icon-button" v-on:click="showNavigation = true">
+                    <md-icon>menu</md-icon>
+                </md-button>
+                <span class="md-title">My Title</span>
+
+                <div class="md-toolbar-section-end">
+                    <md-button v-on:click="showSidepanel = true">Favorites</md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <p v-for="i in 5">
+                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
+                </p>
+            </md-content>
+        </div>
+    </div>
+    <md-drawer :md-active.sync="showNavigation">
+        <md-toolbar class="md-transparent" md-elevation="0">
+            <span class="md-title">My App name</span>
+        </md-toolbar>
+
+        <md-list>
+            <md-list-item>
+                <md-icon>move_to_inbox</md-icon>
+                <span class="md-list-item-text">Inbox</span>
+            </md-list-item>
+
+            <md-list-item>
+                <md-icon>send</md-icon>
+                <span class="md-list-item-text">Sent Mail</span>
+            </md-list-item>
+
+            <md-list-item>
+                <md-icon>delete</md-icon>
+                <span class="md-list-item-text">Trash</span>
+            </md-list-item>
+
+            <md-list-item>
+                <md-icon>error</md-icon>
+                <span class="md-list-item-text">Spam</span>
+            </md-list-item>
+        </md-list>
+    </md-drawer>
+    <md-drawer class="md-right" :md-active.sync="showSidepanel">
+        <md-toolbar class="md-transparent" md-elevation="0">
+            <span class="md-title">Favorites</span>
+        </md-toolbar>
+
+        <md-list>
+            <md-list-item>
+                <span class="md-list-item-text">Abbey Christansen</span>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon class="md-primary">chat_bubble</md-icon>
+                </md-button>
+            </md-list-item>
+
+            <md-list-item>
+                <span class="md-list-item-text">Alex Nelson</span>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon class="md-primary">chat_bubble</md-icon>
+                </md-button>
+            </md-list-item>
+
+            <md-list-item>
+                <span class="md-list-item-text">Mary Johnson</span>
+
+                <md-button class="md-icon-button md-list-action">
+                    <md-icon>chat_bubble</md-icon>
+                </md-button>
+            </md-list-item>
+        </md-list>
+    </md-drawer>
+</div>
+<script>
+    var vm = new Vue({
+        name: 'PersistentMini',
+        data: () => ({
+            showNavigation: false,
+            showSidepanel: false,
+            scrolling: false,
+            allowNextAnimation: true,
+            setView:''
+        }),
+        methods: {
+            GOBtn: function () {
+                this.setView = 1;
+                console.log(this.setView);
+                setTimeout(function () {
+                    $('#content').animate({ scrollTop: vm.topList[vm.setView] }, 1000, function () {
+                        vm.scrolling = false;
+                        vm.allowNextAnimation = false;
+                        return false;
+                    });
+                }, 200);
+            }
+        },
+        mounted() {
+            this.setView='';
+            $('#content').css('height', window.innerHeight - $('#content').offset().top).css('overflow', 'hidden');
+            $('.block').css('height', window.innerHeight - $('#content').offset().top);
+            $(window).scrollTop(0);
+            var nowDiv = 0;
+            var DivList = ['homeVisible', 'funcVisible', 'testVisible', 'infoVisible'];
+            var topHeght = $("#homeVisible").offset().top;
+            var topList = [0, $("#funcVisible").offset().top - topHeght, $("#testVisible").offset().top - topHeght, $("#infoVisible").offset().top - topHeght];
+            this.topList = topList;
+            // should start at 0
+            $('#content').on('scroll touchmove mousewheel', function (event) {
+                if ((!this.scrolling && this.allowNextAnimation) || !!this.setView) {
+                    this.scrolling = true;
+                    console.log($('#content').scrollTop());
+                    nowDiv = topList.indexOf($('#content').scrollTop());
+                    console.log('之前:' + nowDiv);
+                    if (nowDiv >= 0) {
+                        if (event.originalEvent.wheelDelta >= 0) {
+                            console.log('Scroll up');
+                            if (nowDiv >= 0) {
+                                if (nowDiv >= topList.length - 1) {
+                                    nowDiv = 0;
+                                } else {
+                                    nowDiv = nowDiv + 1;
+                                }
+                            }
+                        }
+                        else {
+                            console.log('Scroll down');
+                            if (nowDiv >= 0) {
+                                if (nowDiv <= 0) {
+                                    nowDiv = DivList.length - 1;
+                                } else {
+                                    nowDiv = nowDiv - 1;
+                                }
+                            }
+                        }
+                    } 
+                    console.log(this.setView);
+                    if (!this.setView) {
+                        $('#content').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
+                            this.scrolling = false;
+                            this.allowNextAnimation = false;
+                        });
+                        console.log('現在:' + nowDiv);
+                    }
+                    this.setView = '';
+                    return false;
+                }
+                this.allowNextAnimation = true;
+            });
+        }
+    }).$mount("#MyApp");
+</script>
+<style lang="scss" scoped>
+    .page-container {
+         
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(#000, .12);
+    }
+
+    .md-drawer {
+        width: 230px;
+        max-width: calc(100vw - 125px);
+    }
+
+    .md-content {
+        padding: 16px;
+    }
+</style>
+ 
+ 
+
+

@@ -8,11 +8,16 @@ namespace eggWeb.Controllers
 {
     public class HomeController : Controller
     {
+        //Home
+
         public ActionResult Index()
         {
             return View();
         }
+        public ActionResult Index2()
+        {
+            return View();
+        }
 
-    
     }
 }

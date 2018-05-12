@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/Scripts/county/index.css" rel="stylesheet" />
+<div class="col s2">
+     
+</div>
+<div class="col s10">
+    <svg width="100%" height="600px" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid"></svg>
+</div>
+<div style="position:relative;width:200px;" id="info" >
+    <div style="position:absolute;">
+        <div class="row">
+            <div class="input-field ">
+                <input disabled id="name" placeholder="購買縣市" type="text" class="validate">
+                <label for="name"><i class="fas fa-globe"></i>&ensp;&ensp;縣市&ensp;</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field ">
+                <input disabled id="density" placeholder="地區最高溫" type="text" class="validate">
+                <label for="density"><i class="fas fa-thermometer-empty"></i>&ensp;&ensp;溫度&ensp;</label>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- Content Here -->
+<script src="~/Scripts/county/fisheye.js"></script>
+<script src="~/Scripts/county/county.js"></script>
+<script src="~/Scripts/county/index.js"></script>
+<script src="~/Scripts/county/topojson.v1.min.js"></script>

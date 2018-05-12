@@ -1,0 +1,128 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+    
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+        $('.pushpin').each(function () {
+            var $this = $(this);
+            var $target = $('#' + $(this).attr('data-target'));
+            $this.pushpin({
+                top: $target.offset().top,
+                bottom: $target.offset().top + $target.outerHeight() - $this.height()
+            });
+        });
+    });
+</script>
+<style>
+    .theme{
+        background-color:#F2CA24;
+    }
+    .page-theme{
+        background-color:#EBEBEB;
+    }
+    .block-info{
+        position:inherit;padding:80px;
+    }
+
+    html, body, .block {
+        height: 100%;
+    }
+
+    nav ul li a:hover, nav ul li a.active {
+        background-color: rgba(0,0,0,.1);
+    }
+
+    footer {
+        padding-left: 0;
+    }
+</style>
+<div id="index" class="block theme">
+    <nav class="pushpin pinned" data-target="index" style="top: 0px;">
+        <div class="nav-wrapper theme">
+            <img data-target="slide-out" class="btn-floating btn-large waves-effect waves-light sidenav-trigger circle" src="~/Images/logo.png" />
+            <div class="brand-logo ">
+                Egg Data
+            </div>
+        </div>
+    </nav>
+    <div class="block-info container row">
+        <div class="col s12 center">
+            <img src="~/Images/logo.png" width="350"  />
+        </div>
+        <div class="col s12 center">
+            <h2>Egg Data</h2>
+        </div>
+        <div class="col s12 center">
+            <p>雞蛋的營養豐富，是人人皆知的補滋食品。</p>
+            <p>他被營養學家們稱之為"完全蛋白模式"</p>
+            <p>是營養最完善的食品之一。雞蛋，又稱雞卵，或雞子</p>
+            <p>讓我們來檢測你的雞蛋好不好吧!</p>
+        </div>
+
+    </div>
+</div>
+<div id="blue" class="block page-theme">
+    <nav class="pushpin pin-top" data-target="blue" style="top: 0px;">
+        <div class="nav-wrapper theme">
+            <img data-target="slide-out" class="btn-floating btn-large waves-effect waves-light red sidenav-trigger circle" src="~/Images/logo.png" />
+            <div class="brand-logo ">
+                地點
+            </div>
+        </div>
+    </nav>
+     <div class="block-info row">
+         @{Html.RenderAction("Index", "County");}
+     </div>
+</div>
+<div id="red" class="block page-theme">
+    <nav class="pushpin pin-top" data-target="red" style="top: 0px;">
+        <div class="nav-wrapper theme">
+            <img data-target="slide-out" class="btn-floating btn-large waves-effect waves-light red sidenav-trigger circle" src="~/Images/logo.png" />
+            <div class="brand-logo ">
+                購買方式
+            </div>
+            
+        </div>
+    </nav>
+    <div class="block-info row">
+        <div class="col s6">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>市場</a>
+        </div>
+        <div class="col s6">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>超商</a>
+        </div>
+    </div>
+</div>
+<div id="green" class="block page-theme">
+    <nav class="pushpin pin-top" data-target="green" style="top: 0px;">
+        <div class="nav-wrapper theme">
+            <img data-target="slide-out" class="btn-floating btn-large waves-effect waves-light red sidenav-trigger circle" src="~/Images/logo.png" />
+            <div class="brand-logo ">
+                存放方式
+            </div>
+        </div>
+    </nav>
+    <div class="block-info row">
+        <div class="col s6">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>冰箱</a>
+        </div>
+        <div class="col s6">
+            <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>常溫</a>
+        </div>
+    </div>
+</div>
+<ul id="slide-out" class="sidenav theme">
+    <li>
+        <div class="user-view">
+            <img class="circle" src="~/Images/logo.png" />
+            <span class="name">Egg Data</span>
+        </div>
+    </li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">蛋蛋測試區</a></li>
+    <li><a class="subheader">蛋蛋長知識</a></li>
+    <li><a class="subheader">關於我們</a></li>
+</ul>
+

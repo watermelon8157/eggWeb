@@ -1,0 +1,11 @@
+path {
+  cursor: pointer;
+}
+ 
+#name {
+  font-size: 1.2em;
+}
+
+#unit {
+  font-size: 12px;
+}

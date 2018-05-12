@@ -1,0 +1,79 @@
+﻿<style>
+body{
+  overflow:hidden;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: inline;
+}
+
+.top {
+  background-color: green;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.middle {
+  background-color: yellow;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.bottom {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+</style>
+<div class="top">
+    <h1>Top</h1>
+    <button id="btn" style="display:none;" />
+</div>
+<div class="middle" >
+    <h1>Middle</h1>
+</div>
+<div class="bottom">
+    <h1>Bottom</h1>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(window).scrollTop(0);
+        var position = 0;
+        var scrolling = false;
+        var allowNextAnimation = true;
+        var nowDiv = 0;
+        var DivList = ['top', 'middle', 'bottom'];
+        var topList = [$("div.top").offset().top, $("div.middle").offset().top, $("div.bottom").offset().top];
+        // should start at 0
+        $('body').on('scroll touchmove mousewheel', function (event) {
+            if (!scrolling && allowNextAnimation) {
+                scrolling = true;
+                console.log('之前:' + nowDiv);
+                if (event.originalEvent.wheelDelta >= 0) {
+                    console.log('Scroll up');
+                    if (nowDiv <= 0) nowDiv = DivList.length;
+                    nowDiv = nowDiv - 1;
+                }
+                else {
+                    console.log('Scroll down');
+                    if (nowDiv >= 2) nowDiv = -1;
+                    nowDiv = nowDiv + 1;
+                }
+                $('html, body').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
+                    scrolling = false;
+                    allowNextAnimation = false;
+                });
+                console.log('現在:' + nowDiv);
+                position = scroll;
+                return false;
+            }
+            allowNextAnimation = true;
+        });
+    });
+</script>

@@ -1,0 +1,282 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style type="text/css">
+    .center{
+        text-align:center;
+    }
+</style>
+<div class="page-container" id="Home">
+    <md-app md-theme="purple_theme">
+
+        <md-app-toolbar class="md-primary" md-elevation="0"  v-if="homeVisible">
+            <md-button class="md-icon-button" v-on:click="toggleMenu" v-if="!menuVisible">
+                <md-icon>menu</md-icon>
+            </md-button>
+            <span class="md-title">Egg Data</span>
+        </md-app-toolbar>
+        <md-app-toolbar class="md-primary" md-elevation="0"  v-else-if="testVisible">
+            <md-button class="md-icon-button" v-on:click="toggleMenu" v-if="!menuVisible">
+                <md-icon>menu</md-icon>
+            </md-button>
+            <span class="md-title">蛋蛋測試區</span>
+        </md-app-toolbar>
+        <md-app-toolbar class="md-primary" md-elevation="0" v-else-if="infoVisible">
+            <md-button class="md-icon-button" v-on:click="toggleMenu" v-if="!menuVisible">
+                <md-icon>menu</md-icon>
+            </md-button>
+            <span class="md-title">蛋蛋長知識</span>
+        </md-app-toolbar>
+        <md-app-toolbar class="md-primary" md-elevation="0" v-else-if="aboutVisible">
+            <md-button class="md-icon-button" v-on:click="toggleMenu" v-if="!menuVisible">
+                <md-icon>menu</md-icon>
+            </md-button>
+            <span class="md-title">關於我們</span>
+        </md-app-toolbar>
+
+        <md-app-drawer class="md-primary"  :md-active.sync="menuVisible" >
+            <md-toolbar class="md-transparent" md-elevation="0">
+                <span class="md-toolbar-section-start" v-on:click="toggleHome"><img style="margin-left:15px;" class="circle" src="~/Images/logo.png" width="40%" /></span>
+                <div class="md-toolbar-section-end">
+                    <md-button class="md-icon-button md-dense" v-on:click="toggleMenu">
+                        <md-icon>keyboard_arrow_left</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+
+            <md-list>
+                <md-list-item v-on:click="toggleTest">
+                    <md-icon><i class="fas fa-pencil-alt"></i></md-icon>
+                    <span class="md-list-item-text">蛋蛋測試區</span>
+                </md-list-item>
+
+                <md-list-item v-on:click="toggleInfo">
+                    <md-icon><i class="fas fa-info-circle"></i></md-icon>
+                    <span class="md-list-item-text">蛋蛋長知識</span>
+                </md-list-item>
+
+                <md-list-item  v-on:click="toggleAbout">
+                    <md-icon><i class="fab fa-weixin"></i></md-icon>
+                    <span class="md-list-item-text">關於我們</span>
+                </md-list-item>
+            </md-list>
+        </md-app-drawer>
+        <md-app-content v-if="homeVisible">
+            <div class="md-layout md-gutter md-alignment-center">
+                <div class="md-layout-item center"><img src="~/Images/logo.png" width="350" /></div>
+            </div>
+            <div class="md-layout center">
+                <div class="md-layout-item">
+                    <img src="~/Images/map.png" />
+                </div>
+                <div class="md-layout-item">
+                    <img src="~/Images/egg.png" />
+                </div>
+                <div class="md-layout-item">
+                    <img src="~/Images/map.png" />
+                </div>
+                <div class="md-layout-item">
+                    <img src="~/Images/egg.png" />
+                </div>
+            </div>
+        </md-app-content>
+        <md-app-content v-else-if="testVisible">
+            <md-steppers>
+                <md-step id="a" md-label="來源管道">
+                    <table  class="table">
+                        <tr>
+                            <td style="width:50%;">
+                                <img src="~/Images/map.png" />
+                            </td>
+                            <td  style="text-align:center;vertical-align:middle;width:50%">
+                                <md-button class="md-raised md-primary">北</md-button>
+                                <md-button class="md-raised md-primary">中</md-button>
+                                <md-button class="md-raised md-primary">南</md-button>
+                            </td>
+                        </tr>
+                    </table>
+                   
+                </md-step>
+                <md-step id="b" md-label="購買管道">
+                    <table class="table" style="margin-top: 50px;">
+                        <tr>
+                            <td rowspan="2" style="text-align:center;vertical-align:middle;width:50%">
+                                <img src="~/Images/egg.png" />
+                            </td>
+                            <td style="text-align:center;vertical-align:middle;width:50%">
+                                <md-button class="md-raised md-primary">傳統市場</md-button>
+                                <md-button class="md-raised md-primary">量販店冷藏</md-button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:center;vertical-align:middle;width:50%">
+                                <md-button class="md-raised md-primary">便利商店</md-button>
+                                <md-button class="md-raised md-primary">量販店未冷藏區</md-button>
+                            </td>
+                        </tr>
+                    </table>
+                </md-step>
+                <md-step id="c" md-label="購買日期" class="row">
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                            <img src="~/Images/egg.png" />
+                        </div>
+                        <div class="md-layout-item center">
+                            <vuejs-datepicker :inline="true"></vuejs-datepicker>
+                        </div>
+                    </div>
+                </md-step>
+                <md-step id="d" md-label="保存方式">
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                            <img src="~/Images/icons8-fridge-96.png" />
+                            <br /><h1>冷藏</h1>
+                        </div>
+                        <div class="md-layout-item center">
+                            <img src="~/Images/icons8-table-96.png" />
+                            <br /><h1>常溫</h1>
+                        </div>
+                    </div>
+                </md-step>
+                <md-step id="e" md-label="外觀" class="row">
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                            <img src="~/Images/egg.png" />
+                        </div>
+                        <div class="md-layout-item">
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item">
+                                    蛋殼是否有裂痕&emsp;&emsp;
+                                    <md-radio v-model="radio" value="0" class="md-primary">無</md-radio>
+                                    <md-radio v-model="radio" value="1">有<small></small></md-radio>
+                                </div>
+                            </div>
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item"></div>
+                            </div>
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item">
+                                    蛋的品種&emsp;&emsp;
+                                    <md-radio v-model="radio2" value="0" class="md-primary">蛋殼白色</md-radio>
+                                    <md-radio v-model="radio2" value="1">蛋殼土黃色<small></small></md-radio>
+                                </div>
+                            </div>
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item"></div>
+                            </div>
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item">
+                                    <md-field>
+                                        <label>是否新鮮</label>
+                                        <md-select>
+                                            <md-option value="a">a.新鮮蛋</md-option>
+                                            <md-option value="b">b.新鮮度較差(一週後)</md-option>
+                                            <md-option value="c">c.新鮮度更差</md-option>
+                                            <md-option value="d">d.不新鮮</md-option>
+                                            <md-option value="e">e.非常不新鮮</md-option>
+                                        </md-select>
+                                        <span class="md-helper-text">
+                                            浸水法，判斷氣室大小
+                                        </span>
+                                    </md-field>
+                                </div>
+                                <div class="md-layout-item">
+                                    <img src="~/Images/egg_function.jpg" width="180px;" />
+                                </div>
+                            </div>
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item"></div>
+                            </div>
+                            <div class="md-layout-item md-layout md-gutter">
+                                <div class="md-layout-item">
+                                    <md-field>
+                                        <label>補充說明</label>
+                                        <md-textarea></md-textarea>
+                                    </md-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </md-step>
+                <md-step id="f" md-label="健康指數">
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                            健康指數
+                        </div>
+                    </div>
+                </md-step>
+            </md-steppers>
+        </md-app-content>
+        <md-app-content v-else-if="infoVisible">
+            <div class="col s12 center">
+                <h2>infoVisible</h2>http://tw.chinyieggs.com/q_time.php?cid=3
+
+            </div>
+        </md-app-content>
+        <md-app-content v-else-if="aboutVisible">
+ 
+            <div class="col s12 center">
+                <h2>aboutVisible</h2> Line Bot
+            </div>
+        </md-app-content>
+    </md-app>
+</div>
+<script>
+    var login = new Vue({
+        name: 'PersistentMini',
+        data: () => ({
+            menuVisible: false,
+            homeVisible: true,
+            testVisible: false,
+            infoVisible: false,
+            aboutVisible: false,
+            radio: '0', radio2:'0'
+        }),
+        methods: {
+            toggleMenu () {
+                this.menuVisible = !this.menuVisible;
+            },
+            toggleTest () {
+                this.testVisible = true;
+                this.homeVisible = false;
+                this.infoVisible = false;
+                this.aboutVisible = false;
+            },
+            toggleHome () {
+                this.homeVisible = true;
+                this.testVisible = false;
+                this.infoVisible = false;
+                this.aboutVisible = false;
+            },
+            toggleInfo() {
+                this.infoVisible = true;
+                this.homeVisible = false;
+                this.testVisible = false;
+                this.aboutVisible = false;
+            },
+            toggleAbout() {
+                this.aboutVisible = true;
+                this.infoVisible = false;
+                this.homeVisible = false;
+                this.testVisible = false;
+            }
+        },
+        components: {
+            vuejsDatepicker
+        }
+    }).$mount("#Home");
+ 
+</script>
+
+<style lang="scss" scoped>
+    .md-app {
+ 
+        border: 1px solid rgba(#000, .12);
+    }
+ 
+    .md-drawer {
+        width: 180px;
+        max-width: calc(100vw - 125px);
+    }
+</style>
+

@@ -195,7 +195,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\CountyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TESTController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,6 +210,20 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fa-brands.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fa-brands.min.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fa-regular.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fa-regular.min.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fa-solid.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fa-solid.min.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fontawesome-all.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fontawesome-all.min.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fontawesome.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\css\fontawesome.min.css" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.svg" />
+    <Content Include="Content\fonts.googleapis.css" />
     <Content Include="Content\materialize-v0.97.5\css\materialize.css" />
     <Content Include="Content\materialize-v0.97.5\css\materialize.min.css" />
     <Content Include="Content\materialize-v0.97.5\font\material-design-icons\LICENSE.txt" />
@@ -216,14 +232,14 @@
     <Content Include="Content\materialize-v0.97.5\js\materialize.min.js" />
     <Content Include="Content\materialize.css" />
     <Content Include="Content\materialize.min.css" />
+    <Content Include="Content\rcs_theme.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\vuetify\vuetify.min.css" />
+    <Content Include="Content\vuetify\vuetify.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\background1.jpg" />
-    <Content Include="Images\background2.jpg" />
-    <Content Include="Images\background3.jpg" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -251,6 +267,21 @@
     <Content Include="Content\materialize-v0.97.5\font\material-design-icons\Material-Design-Icons.woff" />
     <Content Include="Content\materialize-v0.97.5\font\material-design-icons\Material-Design-Icons.ttf" />
     <Content Include="Content\materialize-v0.97.5\font\material-design-icons\Material-Design-Icons.eot" />
+    <Content Include="Images\date.png" />
+    <Content Include="Images\egg.png" />
+    <Content Include="Images\egg_function.jpg" />
+    <Content Include="Images\icons8-fridge-96.png" />
+    <Content Include="Images\icons8-table-96.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\map.png" />
+    <Content Include="plugin\vuematerial\vue-material.min.css" />
+    <Content Include="plugin\vuematerial\vue-material.min.js" />
+    <Content Include="Scripts\county\county.js" />
+    <Content Include="Scripts\county\fisheye.js" />
+    <Content Include="Scripts\county\index.css" />
+    <Content Include="Scripts\county\index.js" />
+    <Content Include="Scripts\county\topojson.v1.min.js" />
+    <Content Include="Scripts\d3.v3.min.js" />
     <Content Include="Scripts\init.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\materialize.js" />
@@ -262,6 +293,7 @@
     <Content Include="Scripts\vue-resource.min.js" />
     <Content Include="Scripts\vue.js" />
     <Content Include="Scripts\vue.min.js" />
+    <Content Include="Scripts\vuejs-datepicker.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -283,7 +315,29 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="Content\fontawesome-free-5.0.10\README.md" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
+    <Content Include="plugin\vuematerial\README.md" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\County\Index.cshtml" />
+    <Content Include="Scripts\county\county.shp" />
+    <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Home\Index - 複製.cshtml" />
+    <Content Include="Views\County\Index - 複製.cshtml" />
+    <Content Include="Views\TEST\Index.cshtml" />
+    <Content Include="Views\Home\Index_old.cshtml" />
+    <None Include="Properties\PublishProfiles\egg_data.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

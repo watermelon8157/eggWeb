@@ -1,128 +1,281 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿<style>
+    body {
+        overflow: hidden;
+    }
 
-<nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">Logo</a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
-        </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
-<div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <br><br>
-            <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
-            <div class="row center">
-                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-            </div>
-            <div class="row center">
-                <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-            </div>
-            <br><br>
-        </div>
-    </div>
-    <div class="parallax"><img src="@Url.Content("~/Images/background1.jpg")" alt="Unsplashed background img 1"></div>
-</div>
+    .center {
+        text-align: center;
+    }
 
-<div class="container">
-    <div class="section">
-        <!--   Icon Section   -->
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                    <h5 class="center">Speeds up development</h5>
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+    #homeVisible, #homeVisible .block, #homeVisible .md-content {
+        background-color: #FFC107;
+    }
+
+    #funcVisible, #funcVisible .block, #funcVisible .md-content {
+        /*background-color: #FFC107;*/
+    }
+
+    .use-flexbox{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+ 
+</style>
+<div class="page-container" id="MyApp">
+    <div id="content">
+        <div class="block" id="homeVisible">
+            <md-content>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center"><img src="~/Images/logo.png" width="350" /></div>
                 </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-                    <h5 class="center">User Experience Focused</h5>
-                    <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">
+                        <h1>Egg Data</h1>
+                        <strong> </strong>
+                    </div>
                 </div>
-            </div>
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                    <h5 class="center">Easy to work with</h5>
-                    <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">
+                        <md-button class="md-raised md-primary" v-on:click="toggleFunction(1)">GO</md-button>
+                    </div>
                 </div>
-            </div>
+            </md-content>
         </div>
-    </div>
-</div>
+        <div class="block use-flexbox" id="funcVisible">
+            <md-content>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center" v-on:click="toggleFunction(2)">
+                        <i class="fas fa-file-alt fa-10x"></i>
+                    </div>
+                    <div class="md-layout-item center" v-on:click="toggleFunction(3)">
+                        <i class="fab fa-linux fa-10x"></i>
+                    </div>
+                    <div class="md-layout-item center" v-on:click="toggleFunction(4)">
+                        <i class="fas fa-film fa-10x"></i>
+                    </div>
+                    <div class="md-layout-item center" v-on:click="toggleFunction(5)">
+                        <i class="fab fa-line fa-10x"></i>
+                    </div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center" v-on:click="toggleFunction(2)">蛋蛋檢測區</div>
+                    <div class="md-layout-item center" v-on:click="toggleFunction(3)">蛋蛋長知識</div>
+                    <div class="md-layout-item center" v-on:click="toggleFunction(4)">蛋蛋大事件</div>
+                    <div class="md-layout-item center" v-on:click="toggleFunction(5)">蛋蛋Bot</div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">測試你的蛋蛋健不健康</div>
+                    <div class="md-layout-item center">蛋蛋汁多少，你對你的雞蛋了解嗎?</div>
+                    <div class="md-layout-item center">蛋蛋的一生，以台灣新聞為例</div>
+                    <div class="md-layout-item center">LineBot，告訴你蛋蛋234</div>
+                </div>
+            </md-content>
+        </div>
+        <div class="block" id="testVisible">
+            <md-toolbar class="md-primary">
+ 
+                <span class="md-title">testVisible</span>
+                <div class="md-toolbar-section-end">
+                    <md-button class="md-icon-button" v-on:click="showNavigation = true">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <p v-for="i in 5">
+                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
+                </p>
+            </md-content>
+        </div>
+        <div class="block" id="infoVisible">
+            <md-toolbar class="md-primary" md-theme="purple_theme">
+ 
+                <span class="md-title">infoVisible</span>
 
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-            </div>
+                <div class="md-toolbar-section-end">
+                    <md-button class="md-icon-button" v-on:click="showNavigation = true">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <p v-for="i in 5">
+                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
+                </p>
+            </md-content>
         </div>
-    </div>
-    <div class="parallax"><img src="@Url.Content("~/Images/background2.jpg")" alt="Unsplashed background img 2"></div>
-</div>
-<div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 center">
-                <h3><i class="mdi-content-send brown-text"></i></h3>
-                <h4>Contact Us</h4>
-                <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-            </div>
-        </div>
-    </div>
-</div>
+        <div class="block" id="eventVisible">
+            <md-toolbar class="md-primary" md-theme="purple_theme">
+ 
+                <span class="md-title">eventVisible</span>
 
-<div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-        <div class="container">
-            <div class="row center">
-                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-            </div>
+                <div class="md-toolbar-section-end">
+                    <md-button class="md-icon-button" v-on:click="showNavigation = true">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <p v-for="i in 5">
+                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
+                </p>
+            </md-content>
         </div>
-    </div>
-    <div class="parallax"><img src="@Url.Content("~/Images/background3.jpg")" alt="Unsplashed background img 3"></div>
-</div>
-<footer class="page-footer teal">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Company Bio</h5>
-                <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        <div class="block" id="botVisible">
+            <md-toolbar class="md-primary" md-theme="purple_theme">
+               
+                <span class="md-title">botVisible</span>
 
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Settings</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">Link 1</a></li>
-                    <li><a class="white-text" href="#!">Link 2</a></li>
-                    <li><a class="white-text" href="#!">Link 3</a></li>
-                    <li><a class="white-text" href="#!">Link 4</a></li>
-                </ul>
-            </div>
-            <div class="col l3 s12">
-                <h5 class="white-text">Connect</h5>
-                <ul>
-                    <li><a class="white-text" href="#!">Link 1</a></li>
-                    <li><a class="white-text" href="#!">Link 2</a></li>
-                    <li><a class="white-text" href="#!">Link 3</a></li>
-                    <li><a class="white-text" href="#!">Link 4</a></li>
-                </ul>
-            </div>
+                <div class="md-toolbar-section-end">
+                    <md-button class="md-icon-button" v-on:click="showNavigation = true">
+                        <md-icon>menu</md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <md-content>
+                <p v-for="i in 5">
+                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
+                </p>
+            </md-content>
         </div>
     </div>
-    <div class="footer-copyright">
-        <div class="container">
-            Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-        </div>
-    </div>
-</footer>
+    <md-drawer class="md-right" :md-active.sync="showNavigation">
+        <md-toolbar class="md-transparent" md-elevation="0">
+            <div class="md-toolbar-section-start">
+                <md-button class="md-icon-button md-dense" v-on:click="showNavigation = !showNavigation">
+                    <md-icon>keyboard_arrow_right</md-icon>
+                </md-button>
+            </div>
+            <span class="md-toolbar-section-start" v-on:click="toggleFunction(0)"><img style="margin-left:15px;" class="circle" src="~/Images/logo.png" width="40%" /></span>
+            <div class="md-toolbar-section-end">
+                <h4>Egg Data</h4>
+            </div>
+        </md-toolbar>
+        <md-list>
+ 
+            <md-list-item v-on:click="toggleFunction(2)">
+                <md-icon><i class="fas fa-pencil-alt"></i></md-icon>
+                <span class="md-list-item-text">蛋蛋測試區</span>
+            </md-list-item>
+
+            <md-list-item v-on:click="toggleFunction(3)">
+                <md-icon><i class="fas fa-info-circle"></i></md-icon>
+                <span class="md-list-item-text">蛋蛋長知識</span>
+            </md-list-item>
+            <md-list-item v-on:click="toggleFunction(4)">
+                <md-icon><i class="fas fa-info-circle"></i></md-icon>
+                <span class="md-list-item-text">蛋蛋大事件</span>
+            </md-list-item>
+            <md-list-item v-on:click="toggleFunction(5)">
+                <md-icon><i class="fas fa-info-circle"></i></md-icon>
+                <span class="md-list-item-text">蛋蛋Bot</span>
+            </md-list-item>
+ 
+        </md-list>
+    </md-drawer>
+</div>
+<script>
+    var vm = new Vue({
+        name: 'PersistentMini',
+        data: () => ({
+            showNavigation: false,
+            showSidepanel: false,
+            scrolling: false,
+            allowNextAnimation: true,
+            setView:''
+        }),
+        methods: {
+            toggleFunction: function (pView, pTime) {
+                pTime = !!pTime ? pTime : 500;
+                this.setView = pView;
+                console.log(this.setView);
+                setTimeout(function () {
+                    $('#content').animate({ scrollTop: vm.topList[vm.setView] }, 500, function () {
+                        vm.scrolling = false;
+                        vm.allowNextAnimation = false;
+                        return false;
+                    });
+                }, 200);
+            }
+        },
+        mounted() {
+            this.setView='';
+            $('#content').css('height', window.innerHeight - $('#content').offset().top).css('overflow', 'hidden');
+            $('.block').css('height', window.innerHeight - $('#content').offset().top);
+            $(window).scrollTop(0);
+            var nowDiv = 0;
+            var DivList = ['homeVisible', 'funcVisible', 'testVisible', 'infoVisible', 'eventVisible', 'botVisible'];
+            var topHeght = $("#homeVisible").offset().top;
+            var topList = [0, $("#" + DivList[1]).offset().top - topHeght,
+                            $("#" + DivList[2]).offset().top - topHeght,
+                            $("#" + DivList[3]).offset().top - topHeght,
+                            $("#" + DivList[4]).offset().top - topHeght,
+                            $("#" + DivList[5]).offset().top - topHeght];
+            this.topList = topList;
+            //// should start at 0
+            $('#content').on('scroll touchmove mousewheel', function (event) {
+                if ((!this.scrolling && this.allowNextAnimation) || !!this.setView) {
+                    this.scrolling = true;
+                    console.log($('#content').scrollTop());
+                    nowDiv = topList.indexOf($('#content').scrollTop());
+                    console.log('之前:' + nowDiv);
+                    if (nowDiv >= 0) {
+                        if (event.originalEvent.wheelDelta >= 0) {
+                            console.log('Scroll up');
+                            if (nowDiv >= 0) {
+                                if (nowDiv >= topList.length - 1) {
+                                    nowDiv = 0;
+                                } else {
+                                    nowDiv = nowDiv + 1;
+                                }
+                            }
+                        }
+                        else {
+                            console.log('Scroll down');
+                            if (nowDiv >= 0) {
+                                if (nowDiv <= 0) {
+                                    nowDiv = DivList.length - 1;
+                                } else {
+                                    nowDiv = nowDiv - 1;
+                                }
+                            }
+                        }
+                    } 
+                    console.log(this.setView);
+                    if (!this.setView) {
+                        $('#content').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
+                            this.scrolling = false;
+                            this.allowNextAnimation = false;
+                        });
+                        console.log('現在:' + nowDiv);
+                    }
+                    this.setView = '';
+                    return false;
+                }
+                this.allowNextAnimation = true;
+            });
+        }
+    }).$mount("#MyApp");
+</script>
+<style lang="scss" scoped>
+    .page-container {
+         
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(#000, .12);
+    }
+
+    .md-drawer {
+        width: 230px;
+        max-width: calc(100vw - 125px);
+    }
+
+    .md-content {
+        padding: 16px;
+    }
+</style>
+ 
+ 
+
+
