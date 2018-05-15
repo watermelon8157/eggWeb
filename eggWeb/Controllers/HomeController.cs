@@ -18,6 +18,9 @@ namespace eggWeb.Controllers
         {
             return View();
         }
-
+        public ActionResult Index_old()
+        {
+            return View();
+        }
     }
 }

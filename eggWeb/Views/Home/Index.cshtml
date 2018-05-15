@@ -83,9 +83,131 @@
                 </div>
             </md-toolbar>
             <md-content>
-                <p v-for="i in 5">
-                    BBLorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.
-                </p>
+                <md-steppers>
+                    <md-step id="a" md-label="來源管道">
+                        <table class="table">
+                            <tr>
+                                <td style="width:50%;">
+                                    <img src="~/Images/map.png" />
+                                </td>
+                                <td style="text-align:center;vertical-align:middle;width:50%">
+                                    <md-button class="md-raised md-primary">北</md-button>
+                                    <md-button class="md-raised md-primary">中</md-button>
+                                    <md-button class="md-raised md-primary">南</md-button>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </md-step>
+                    <md-step id="b" md-label="購買管道">
+                        <table class="table" style="margin-top: 50px;">
+                            <tr>
+                                <td rowspan="2" style="text-align:center;vertical-align:middle;width:50%">
+                                    <img src="~/Images/egg.png" />
+                                </td>
+                                <td style="text-align:center;vertical-align:middle;width:50%">
+                                    <md-button class="md-raised md-primary">傳統市場</md-button>
+                                    <md-button class="md-raised md-primary">量販店冷藏</md-button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;vertical-align:middle;width:50%">
+                                    <md-button class="md-raised md-primary">便利商店</md-button>
+                                    <md-button class="md-raised md-primary">量販店未冷藏區</md-button>
+                                </td>
+                            </tr>
+                        </table>
+                    </md-step>
+                    <md-step id="c" md-label="購買日期" class="row">
+                        <div class="md-layout md-gutter md-alignment-center">
+                            <div class="md-layout-item center">
+                                <img src="~/Images/egg.png" />
+                            </div>
+                            <div class="md-layout-item center">
+                                <vuejs-datepicker :inline="true"></vuejs-datepicker>
+                            </div>
+                        </div>
+                    </md-step>
+                    <md-step id="d" md-label="保存方式">
+                        <div class="md-layout md-gutter md-alignment-center">
+                            <div class="md-layout-item center">
+                                <img src="~/Images/icons8-fridge-96.png" />
+                                <br /><h1>冷藏</h1>
+                            </div>
+                            <div class="md-layout-item center">
+                                <img src="~/Images/icons8-table-96.png" />
+                                <br /><h1>常溫</h1>
+                            </div>
+                        </div>
+                    </md-step>
+                    <md-step id="e" md-label="外觀" class="row">
+                        <div class="md-layout md-gutter md-alignment-center">
+                            <div class="md-layout-item center">
+                                <img src="~/Images/egg.png" />
+                            </div>
+                            <div class="md-layout-item">
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item">
+                                        蛋殼是否有裂痕&emsp;&emsp;
+                                        <md-radio v-model="radio" value="0" class="md-primary">無</md-radio>
+                                        <md-radio v-model="radio" value="1">有<small></small></md-radio>
+                                    </div>
+                                </div>
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item"></div>
+                                </div>
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item">
+                                        蛋的品種&emsp;&emsp;
+                                        <md-radio v-model="radio2" value="0" class="md-primary">蛋殼白色</md-radio>
+                                        <md-radio v-model="radio2" value="1">蛋殼土黃色<small></small></md-radio>
+                                    </div>
+                                </div>
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item"></div>
+                                </div>
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item">
+                                        <md-field>
+                                            <label>是否新鮮</label>
+                                            <md-select>
+                                                <md-option value="a">a.新鮮蛋</md-option>
+                                                <md-option value="b">b.新鮮度較差(一週後)</md-option>
+                                                <md-option value="c">c.新鮮度更差</md-option>
+                                                <md-option value="d">d.不新鮮</md-option>
+                                                <md-option value="e">e.非常不新鮮</md-option>
+                                            </md-select>
+                                            <span class="md-helper-text">
+                                                浸水法，判斷氣室大小
+                                            </span>
+                                        </md-field>
+                                    </div>
+                                    <div class="md-layout-item">
+                                        <img src="~/Images/egg_function.jpg" width="180px;" />
+                                    </div>
+                                </div>
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item"></div>
+                                </div>
+                                <div class="md-layout-item md-layout md-gutter">
+                                    <div class="md-layout-item">
+                                        <md-field>
+                                            <label>補充說明</label>
+                                            <md-textarea></md-textarea>
+                                        </md-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </md-step>
+                    <md-step id="f" md-label="健康指數">
+                        <div class="md-layout md-gutter md-alignment-center">
+                            <div class="md-layout-item center">
+                                健康指數
+                            </div>
+                        </div>
+                    </md-step>
+                </md-steppers>
             </md-content>
         </div>
         <div class="block" id="infoVisible">
@@ -183,7 +305,8 @@
             showSidepanel: false,
             scrolling: false,
             allowNextAnimation: true,
-            setView:''
+            setView: '',
+            radio: '0', radio2: '0'
         }),
         methods: {
             toggleFunction: function (pView, pTime) {
@@ -214,47 +337,47 @@
                             $("#" + DivList[5]).offset().top - topHeght];
             this.topList = topList;
             //// should start at 0
-            $('#content').on('scroll touchmove mousewheel', function (event) {
-                if ((!this.scrolling && this.allowNextAnimation) || !!this.setView) {
-                    this.scrolling = true;
-                    console.log($('#content').scrollTop());
-                    nowDiv = topList.indexOf($('#content').scrollTop());
-                    console.log('之前:' + nowDiv);
-                    if (nowDiv >= 0) {
-                        if (event.originalEvent.wheelDelta >= 0) {
-                            console.log('Scroll up');
-                            if (nowDiv >= 0) {
-                                if (nowDiv >= topList.length - 1) {
-                                    nowDiv = 0;
-                                } else {
-                                    nowDiv = nowDiv + 1;
-                                }
-                            }
-                        }
-                        else {
-                            console.log('Scroll down');
-                            if (nowDiv >= 0) {
-                                if (nowDiv <= 0) {
-                                    nowDiv = DivList.length - 1;
-                                } else {
-                                    nowDiv = nowDiv - 1;
-                                }
-                            }
-                        }
-                    } 
-                    console.log(this.setView);
-                    if (!this.setView) {
-                        $('#content').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
-                            this.scrolling = false;
-                            this.allowNextAnimation = false;
-                        });
-                        console.log('現在:' + nowDiv);
-                    }
-                    this.setView = '';
-                    return false;
-                }
-                this.allowNextAnimation = true;
-            });
+            //$('#content').on('scroll touchmove mousewheel', function (event) {
+            //    if ((!this.scrolling && this.allowNextAnimation) || !!this.setView) {
+            //        this.scrolling = true;
+            //        console.log($('#content').scrollTop());
+            //        nowDiv = topList.indexOf($('#content').scrollTop());
+            //        console.log('之前:' + nowDiv);
+            //        if (nowDiv >= 0) {
+            //            if (event.originalEvent.wheelDelta >= 0) {
+            //                console.log('Scroll up');
+            //                if (nowDiv >= 0) {
+            //                    if (nowDiv >= topList.length - 1) {
+            //                        nowDiv = 0;
+            //                    } else {
+            //                        nowDiv = nowDiv + 1;
+            //                    }
+            //                }
+            //            }
+            //            else {
+            //                console.log('Scroll down');
+            //                if (nowDiv >= 0) {
+            //                    if (nowDiv <= 0) {
+            //                        nowDiv = DivList.length - 1;
+            //                    } else {
+            //                        nowDiv = nowDiv - 1;
+            //                    }
+            //                }
+            //            }
+            //        } 
+            //        console.log(this.setView);
+            //        if (!this.setView) {
+            //            $('#content').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
+            //                this.scrolling = false;
+            //                this.allowNextAnimation = false;
+            //            });
+            //            console.log('現在:' + nowDiv);
+            //        }
+            //        this.setView = '';
+            //        return false;
+            //    }
+            //    this.allowNextAnimation = true;
+            //});
         }
     }).$mount("#MyApp");
 </script>

@@ -14,5 +14,12 @@ namespace eggWeb.Controllers
         {
             return PartialView();
         }
+
+        [ChildActionOnly]
+        // GET: County
+        public ActionResult Index2()
+        {
+            return PartialView();
+        }
     }
 }
