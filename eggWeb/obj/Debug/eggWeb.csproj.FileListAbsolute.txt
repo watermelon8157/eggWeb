@@ -197,6 +197,15 @@ D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\zh-Hant\Microsoft.Owin.Security
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\zh-Hant\Microsoft.Owin.Security.Google.resources.dll
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\zh-Hant\Microsoft.Owin.Security.Twitter.resources.dll
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\zh-Hant\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Debug\eggWeb.csprojResolveAssemblyReference.cache
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Debug\eggWeb.dll
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Debug\eggWeb.pdb
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\acgDBA.dll
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\Dapper.dll
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\log4net.dll
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\System.Data.SQLite.dll
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\System.Data.SQLite.EF6.dll
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\System.Data.SQLite.Linq.dll
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\Dapper.xml
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\log4net.xml
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\System.Data.SQLite.xml
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Debug\eggWeb.csprojResolveAssemblyReference.cache
