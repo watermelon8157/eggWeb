@@ -365,7 +365,7 @@ html.md-theme-default {
   background: var(--md-theme-default-scrollbar-on-background-variant, #757575); }
 
 :root {
-  --md-theme-green_theme-primary: #43A047
+  --md-theme-green_theme-primary:#43A047
     ;
   --md-theme-green_theme-accent: #ff5252
     ;

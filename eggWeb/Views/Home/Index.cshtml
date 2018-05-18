@@ -56,17 +56,18 @@
         <div class="block" id="homeVisible">
             <md-content>
                 <div class="md-layout md-gutter md-alignment-center">
-                    <div class="md-layout-item center"><img src="~/Images/logo.png" width="350" /></div>
-                </div>
-                <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">
-                        <h1>危雞百顆</h1>
-                        <strong> </strong>
+                        <img src="~/Images/logo.png" width="350" />
                     </div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">
-                        <md-button class="md-raised md-primary" v-on:click="toggleFunction(1)">GO</md-button>
+                        <img src="~/Images/egg_data.png" width="350" style="padding: 25px;" />
+                    </div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center">
+                        <img src="~/Images/go.png" width="300" v-on:click="toggleFunction(1)" style="padding: 25px;" />
                     </div>
                 </div>
             </md-content>
@@ -76,16 +77,16 @@
             <md-content>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center" v-on:click="toggleFunction(2)">
-                        <i class="fas fa-file-alt fa-10x"></i>
+                        <img src="~/Images/testVisible.png" />
                     </div>
                     <div class="md-layout-item center" v-on:click="toggleFunction(3)">
-                        <i class="fab fa-linux fa-10x"></i>
+                        <img src="~/Images/infoVisible.png" />
                     </div>
                     <div class="md-layout-item center" v-on:click="toggleFunction(4)">
-                        <i class="fas fa-film fa-10x"></i>
+                        <img src="~/Images/eventVisible.png" />
                     </div>
                     <div class="md-layout-item center" v-on:click="toggleFunction(5)">
-                        <i class="fab fa-line fa-10x"></i>
+                        <img src="~/Images/botVisible.png" />
                     </div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
@@ -105,7 +106,10 @@
         <!-- ... 蛋蛋測驗區 ... -->
         <div class="block" id="testVisible">
             <md-toolbar class="md-primary">
-                <span class="md-title">蛋蛋測試區</span>
+                <span class="md-title">
+                    <img src="~/Images/testVisible.png" width="50" />
+                    蛋蛋測試區
+                </span>
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
                         <md-icon>menu</md-icon>
@@ -253,7 +257,10 @@
         <div class="block" id="infoVisible">
             <md-toolbar class="md-primary" md-theme="purple_theme">
  
-                <span class="md-title">蛋蛋長知識</span>
+                <span class="md-title">
+                    <img src="~/Images/infoVisible.png" width="50" />
+                    蛋蛋長知識
+                </span>
 
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
@@ -315,7 +322,10 @@
         <div class="block" id="eventVisible">
             <md-toolbar class="md-primary" md-theme="orange_theme">
  
-                <span class="md-title">蛋蛋大事件</span>
+                <span class="md-title">
+                    <img src="~/Images/eventVisible.png"width="50" />
+                    蛋蛋大事件
+                </span>
 
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
@@ -325,24 +335,25 @@
             </md-toolbar>
             <md-content>
                <template v-if="nowFunc == 'eventVisible'">
-                   <md-card>
-                       <md-card-media-cover>
-                           <md-card-media md-ratio="16:9">
-                               <img src="https://vuematerial.io/assets/examples/card-sky.jpg" alt="Skyscraper">
-                           </md-card-media>
-                           <md-card-area>
-                               <md-card-header>
-                                   <span class="md-title">Without text background</span>
-                                   <span class="md-subhead">I bet you can't read this</span>
-                               </md-card-header>
-
-                               <md-card-actions>
-                                   <md-button>Neither this</md-button>
-                                   <md-button>Or this</md-button>
-                               </md-card-actions>
-                           </md-card-area>
-                       </md-card-media-cover>
-                   </md-card>
+                   <div id="eventCard" style="overflow:auto;" class="md-layout md-gutter md-alignment-center">
+                       <md-card v-for="i in 20">
+                           <md-card-media-cover>
+                               <md-card-media md-ratio="16:9">
+                                   <img src="https://vuematerial.io/assets/examples/card-sky.jpg" alt="Skyscraper">
+                               </md-card-media>
+                               <md-card-area>
+                                   <md-card-header>
+                                       <span class="md-title">Without text background</span>
+                                       <span class="md-subhead">I bet you can't read this</span>
+                                   </md-card-header>
+                                   <md-card-actions>
+                                       <md-button>Neither this</md-button>
+                                   </md-card-actions>
+                               </md-card-area>
+                           </md-card-media-cover>
+                       </md-card>
+                   </div>
+                    
                </template>
                 <template v-else>
                     <div class="md-layout md-gutter md-alignment-center">
@@ -357,7 +368,10 @@
         <div class="block" id="botVisible">
             <md-toolbar class="md-primary" md-theme="green_theme">
                
-                <span class="md-title">蛋蛋Bot</span>
+                <span class="md-title">
+                    <img src="~/Images/botVisible.png" width="50" />
+                    蛋蛋Bot
+                </span>
 
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
@@ -367,8 +381,8 @@
             </md-toolbar>
             <md-content  >
                 <template  v-if="nowFunc == 'botVisible'">
-                    <div class="md-layout md-gutter">
-                        <div class="md-layout-item">
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
                             <i class="fab fa-line fa-10x md-primary"></i>
                         </div>
                     </div>
@@ -400,20 +414,20 @@
         <md-list>
  
             <md-list-item v-on:click="toggleFunction(2)">
-                <md-icon><i class="fas fa-file-alt"></i></md-icon>
+                <img src="~/Images/testVisible.png" width="50" style="margin: 5px;" />
                 <span class="md-list-item-text">蛋蛋測試區</span>
             </md-list-item>
 
             <md-list-item v-on:click="toggleFunction(3)">
-                <md-icon><i class="fab fa-linux"></i></md-icon>
+                <img src="~/Images/infoVisible.png" width="50" style="margin: 5px;" />
                 <span class="md-list-item-text">蛋蛋長知識</span>
             </md-list-item>
             <md-list-item v-on:click="toggleFunction(4)">
-                <md-icon><i class="fas fa-film"></i></md-icon>
+                <img src="~/Images/eventVisible.png" width="50" style="margin: 5px;" />
                 <span class="md-list-item-text">蛋蛋大事件</span>
             </md-list-item>
             <md-list-item v-on:click="toggleFunction(5)">
-                <md-icon><i class="fab fa-line"></i></md-icon>
+                <img src="~/Images/botVisible.png" width="50" style="margin: 5px;" />
                 <span class="md-list-item-text">蛋蛋Bot</span>
             </md-list-item>
  
@@ -431,116 +445,118 @@
             setView: '',//設定指定頁面
             home: {},
             func: {},
-            test: { radio: '0', radio2: '0' },
+            test: { step:0, radio: '0', radio2: '0' },
             info: { infoList: [], infoTest:[],isShow:false},
             event: {},
             bot: {},
         };
-    var vm = new Vue({
-        name: 'eggData',
-        data: Object.assign(set_vm),
-        methods: {
-            toggleFunction: function (pView, pTime) {
-                //移動至指定功能
+        var vm = new Vue({
+            name: 'eggData',
+            data: Object.assign(set_vm),
+            methods: {
+                toggleFunction: function (pView, pTime) {
+                    //移動至指定功能
                 
-                pTime = !!pTime ? pTime : 500;
-                this.setView = pView;
-                console.log(this.setView);
-                setTimeout(function () {
-                    $('#content').animate({ scrollTop: vm.topList[vm.setView] }, 500, function () {
-                        vm.scrolling = false;
-                        vm.allowNextAnimation = false;
-                        vm.nowFunc = vm.DivList[pView];
-                        return false;
+                    pTime = !!pTime ? pTime : 500;
+                    this.setView = pView;
+                    console.log(this.setView);
+                    setTimeout(function () {
+                        $('#content').animate({ scrollTop: vm.topList[vm.setView] }, 500, function () {
+                            vm.scrolling = false;
+                            vm.allowNextAnimation = false;
+                            vm.nowFunc = vm.DivList[pView];
+                            return false;
+                        });
+                    }, 200);
+                },//toggleFunction
+                setScroll: function () {
+                    //// should start at 0
+                    var nowDiv = 0;
+                    $('#content').on('scroll touchmove mousewheel', function (event) {
+                        if ((!this.scrolling && this.allowNextAnimation) || !!this.setView) {
+                            this.scrolling = true;
+                            console.log($('#content').scrollTop());
+                            nowDiv = this.topList.indexOf($('#content').scrollTop());
+                            console.log('之前:' + nowDiv);
+                            if (nowDiv >= 0) {
+                                if (event.originalEvent.wheelDelta >= 0) {
+                                    console.log('Scroll up');
+                                    if (nowDiv >= 0) {
+                                        if (nowDiv >= this.topList.length - 1) {
+                                            nowDiv = 0;
+                                        } else {
+                                            nowDiv = nowDiv + 1;
+                                        }
+                                    }
+                                }
+                                else {
+                                    console.log('Scroll down');
+                                    if (nowDiv >= 0) {
+                                        if (nowDiv <= 0) {
+                                            nowDiv = this.DivList.length - 1;
+                                        } else {
+                                            nowDiv = nowDiv - 1;
+                                        }
+                                    }
+                                }
+                            }
+                            console.log(this.setView);
+                            if (!this.setView) {
+                                $('#content').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
+                                    this.scrolling = false;
+                                    this.allowNextAnimation = false;
+                                });
+                                console.log('現在:' + nowDiv);
+                            }
+                            this.setView = '';
+                            return false;
+                        }
+                        this.allowNextAnimation = true;
                     });
-                }, 200);
-            },//toggleFunction
-            setScroll: function () {
-                //// should start at 0
-                var nowDiv = 0;
-                $('#content').on('scroll touchmove mousewheel', function (event) {
-                    if ((!this.scrolling && this.allowNextAnimation) || !!this.setView) {
-                        this.scrolling = true;
-                        console.log($('#content').scrollTop());
-                        nowDiv = this.topList.indexOf($('#content').scrollTop());
-                        console.log('之前:' + nowDiv);
-                        if (nowDiv >= 0) {
-                            if (event.originalEvent.wheelDelta >= 0) {
-                                console.log('Scroll up');
-                                if (nowDiv >= 0) {
-                                    if (nowDiv >= this.topList.length - 1) {
-                                        nowDiv = 0;
-                                    } else {
-                                        nowDiv = nowDiv + 1;
-                                    }
-                                }
-                            }
-                            else {
-                                console.log('Scroll down');
-                                if (nowDiv >= 0) {
-                                    if (nowDiv <= 0) {
-                                        nowDiv = this.DivList.length - 1;
-                                    } else {
-                                        nowDiv = nowDiv - 1;
-                                    }
-                                }
-                            }
-                        }
-                        console.log(this.setView);
-                        if (!this.setView) {
-                            $('#content').animate({ scrollTop: topList[nowDiv] }, 1000, function () {
-                                this.scrolling = false;
-                                this.allowNextAnimation = false;
-                            });
-                            console.log('現在:' + nowDiv);
-                        }
-                        this.setView = '';
-                        return false;
-                    }
-                    this.allowNextAnimation = true;
-                });
-            }//setScroll
+                }//setScroll
            
-        },//methods
-        computed: {
+            },//methods
+            computed: {
              
-        },
-        watch: {
-            nowFunc: function (value) {
-                switch (value) {
-                    case 'infoVisible':
-                        setTimeout(function () { $('#infoLab').css('height', window.innerHeight - $('#infoLab').offset().top); },1000);
-                        break;
-                    default:
-
+            },//computed
+            watch: {
+                nowFunc: function (value) {
+                    switch (value) {
+                        case 'infoVisible':
+                            setTimeout(function () { $('#infoLab').css('height', window.innerHeight - $('#infoLab').offset().top); }, 500);
+                            break;
+                        case 'eventVisible':
+                            setTimeout(function () { $('#eventCard').css('height', window.innerHeight - $('#eventCard').offset().top); }, 500);
+                            break;
+                        default:
+                    }
                 }
-            }
-        },//watch
-        mounted() {
-            //畫面初始設定，只會在載入時執行一次
-            this.setView='';
-            $('#content').css('height', window.innerHeight - $('#content').offset().top).css('overflow', 'hidden');
-            $('.block').css('height', window.innerHeight - $('#content').offset().top);
-            $(window).scrollTop(0);
-            this.DivList = ['homeVisible', 'funcVisible', 'testVisible', 'infoVisible', 'eventVisible', 'botVisible'];
-            var topHeght = $("#homeVisible").offset().top;
-            this.topList = [0, $("#" + this.DivList[1]).offset().top - topHeght,
-                            $("#" + this.DivList[2]).offset().top - topHeght,
-                            $("#" + this.DivList[3]).offset().top - topHeght,
-                            $("#" + this.DivList[4]).offset().top - topHeght,
-                            $("#" + this.DivList[5]).offset().top - topHeght];
+            },//watch
+            mounted() {
+                //畫面初始設定，只會在載入時執行一次
+                this.setView='';
+                $('#content').css('height', window.innerHeight - $('#content').offset().top).css('overflow', 'hidden');
+                $('.block').css('height', window.innerHeight - $('#content').offset().top);
+                $(window).scrollTop(0);
+                this.DivList = ['homeVisible', 'funcVisible', 'testVisible', 'infoVisible', 'eventVisible', 'botVisible'];
+                var topHeght = $("#homeVisible").offset().top;
+                this.topList = [0, $("#" + this.DivList[1]).offset().top - topHeght,
+                                $("#" + this.DivList[2]).offset().top - topHeght,
+                                $("#" + this.DivList[3]).offset().top - topHeght,
+                                $("#" + this.DivList[4]).offset().top - topHeght,
+                                $("#" + this.DivList[5]).offset().top - topHeght];
              
-            //取的資料
-            this.$http.post('/Home/getInfo').then((response) => {
-                this.info.infoList = Object.assign([], response.data);
-                vm.info.isShow = true;
-            }, (response) => {
+                //取的Info資料
+                this.$http.post('/Home/getInfo').then((response) => {
+                    this.info.infoList = Object.assign([], response.data);
+                    vm.info.isShow = true;
+                }, (response) => {
 
-            });
-            //this.toggleFunction(3);
-        }//mounted
-    }).$mount("#MyApp");
-</script>
+                });
+            
+            }//mounted
+        }).$mount("#MyApp");
+    </script>
 }
 
  
