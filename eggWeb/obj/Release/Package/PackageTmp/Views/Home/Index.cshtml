@@ -5,10 +5,19 @@
         overflow: hidden;
     }
 
+    .pointer {
+        cursor: pointer;
+    }
+
     .center {
         text-align: center;
     }
-
+      .right {
+        text-align: right;
+    }
+       .left {
+        text-align: left;
+    }
     #homeVisible, #homeVisible .block, #homeVisible .md-content {
         background-color: #FFC107;
     }
@@ -50,6 +59,7 @@
       }
 </style>
 <div class="page-container" id="MyApp">
+    
     <!-- ... 畫面主功能 ... -->
     <div id="content">
         <!-- ... 首頁 ... -->
@@ -57,17 +67,23 @@
             <md-content>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">
-                        <img src="~/Images/logo.png" width="350" />
+                        <img src="~/Images/logo.png" width="150" />
                     </div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">
-                        <img src="~/Images/egg_data.png" width="350" style="padding: 25px;" />
+                        <img src="~/Images/egg_data.png" width="150" style="padding: 25px;" />
                     </div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">
-                        <img src="~/Images/go.png" width="300" v-on:click="toggleFunction(1)" style="padding: 25px;" />
+                        <p>雞蛋是營養價值非常豐富的食物，可以做成許多美味的料理，出現在你我的三餐中</p>
+                        <p>在食用雞蛋的同時，您是否真正了解雞蛋呢??就讓危雞百顆來為您解答吧!</p>
+                    </div>
+                </div>
+                <div class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout-item center pointer">
+                        <img src="~/Images/go.png" width="150" v-on:click="toggleFunction(1)" style="padding: 25px;" />
                     </div>
                 </div>
             </md-content>
@@ -76,24 +92,24 @@
         <div class="block use-flexbox" id="funcVisible">
             <md-content>
                 <div class="md-layout md-gutter md-alignment-center">
-                    <div class="md-layout-item center" v-on:click="toggleFunction(2)">
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(2)">
                         <img src="~/Images/testVisible.png" />
                     </div>
-                    <div class="md-layout-item center" v-on:click="toggleFunction(3)">
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(3)">
                         <img src="~/Images/infoVisible.png" />
                     </div>
-                    <div class="md-layout-item center" v-on:click="toggleFunction(4)">
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(4)">
                         <img src="~/Images/eventVisible.png" />
                     </div>
-                    <div class="md-layout-item center" v-on:click="toggleFunction(5)">
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(5)">
                         <img src="~/Images/botVisible.png" />
                     </div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
-                    <div class="md-layout-item center" v-on:click="toggleFunction(2)">蛋蛋檢測區</div>
-                    <div class="md-layout-item center" v-on:click="toggleFunction(3)">蛋蛋長知識</div>
-                    <div class="md-layout-item center" v-on:click="toggleFunction(4)">蛋蛋大事件</div>
-                    <div class="md-layout-item center" v-on:click="toggleFunction(5)">蛋蛋Bot</div>
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(2)">蛋蛋檢測區</div>
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(3)">蛋蛋長知識</div>
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(4)">蛋蛋大事件</div>
+                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(5)">蛋蛋Bot</div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">測試你的蛋蛋健不健康</div>
@@ -112,71 +128,68 @@
                 </span>
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
-                        <md-icon>menu</md-icon>
+                        <md-icon><i class="fas fa-bars"></i></md-icon>
                     </md-button>
                 </div>
             </md-toolbar>
-            <md-content>
+            <md-content class="md-scrollbar"  style="overflow:auto;">
                 <template  v-if="nowFunc == 'testVisible'">
-                    <md-steppers>
-                        <md-step id="a" md-label="來源管道">
-                            <table class="table">
-                                <tr>
-                                    <td style="width:50%;">
-                                        <img src="~/Images/map.png" />
-                                    </td>
-                                    <td style="text-align:center;vertical-align:middle;width:50%">
-                                        <md-button class="md-raised md-primary">北</md-button>
-                                        <md-button class="md-raised md-primary">中</md-button>
-                                        <md-button class="md-raised md-primary">南</md-button>
-                                    </td>
-                                </tr>
-                            </table>
-
-                        </md-step>
-                        <md-step id="b" md-label="購買管道">
-                            <table class="table" style="margin-top: 50px;">
-                                <tr>
-                                    <td rowspan="2" style="text-align:center;vertical-align:middle;width:50%">
-                                        <img src="~/Images/egg.png" />
-                                    </td>
-                                    <td style="text-align:center;vertical-align:middle;width:50%">
-                                        <md-button class="md-raised md-primary">傳統市場</md-button>
-                                        <md-button class="md-raised md-primary">量販店冷藏</md-button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="text-align:center;vertical-align:middle;width:50%">
-                                        <md-button class="md-raised md-primary">便利商店</md-button>
-                                        <md-button class="md-raised md-primary">量販店未冷藏區</md-button>
-                                    </td>
-                                </tr>
-                            </table>
-                        </md-step>
-                        <md-step id="c" md-label="購買日期" class="row">
-                            <div class="md-layout md-gutter md-alignment-center">
-                                <div class="md-layout-item center">
-                                    <img src="~/Images/egg.png" />
+                    <md-steppers md-vertical id="testSteppers"   >
+                        <md-step id="a" md-label="來源管道" md-description="你在哪裡和蛋蛋的健康也有關係唷!">
+                            <div class="md-layout md-gutter md-alignment-center-center">
+                                <div class="md-layout-item">
+                                    <img src="~/Images/map.png" width="400" />
                                 </div>
-                                <div class="md-layout-item center">
-                                    <vuejs-datepicker :inline="true"></vuejs-datepicker>
+                                <div class="md-layout-item">
+                                    <md-button class="md-raised md-primary">北</md-button>
+                                    <md-button class="md-raised md-primary">中</md-button>
+                                    <md-button class="md-raised md-primary">南</md-button>
                                 </div>
                             </div>
                         </md-step>
-                        <md-step id="d" md-label="保存方式">
-                            <div class="md-layout md-gutter md-alignment-center">
-                                <div class="md-layout-item center">
+
+                        <md-step id="b" md-label="購買管道" md-description="你在哪裡買也和蛋蛋的健康有關係唷!">
+                            <div class="md-layout md-gutter md-alignment-center-center">
+                                <div class="md-layout-item">
+                                    <img src="~/Images/egg.png" width="400" />
+                                    
+                                </div>
+                                <div class="md-layout-item">
+                                    <md-button class="md-raised md-primary">傳統市場</md-button>
+                                    <md-button class="md-raised md-primary">量販店冷藏</md-button><br />
+                                    <md-button class="md-raised md-primary">便利商店</md-button>
+                                    <md-button class="md-raised md-primary">量販店未冷藏區</md-button>
+                                </div>
+                            </div>
+                        </md-step>
+
+                        <md-step id="c" md-label="購買日期" md-description="蛋蛋從接觸空氣開始，新鮮度會開始降低!">
+                            <div class="md-layout md-gutter md-alignment-center-center">
+                                <div class="md-layout-item">
+                                    購買日期:<br />
+                                    <h1>{{test.buy_date}}</h1>
+                                </div> 
+                                <div class="md-layout-item">
+                                    <vuejs-datepicker :inline="true" v-model="test.buy_date"></vuejs-datepicker>
+                                </div>
+                            </div>
+                        </md-step>
+
+                        <md-step id="d" md-label="保存方式" md-description="蛋蛋放在哪裡也和新鮮度有關係唷!">
+                            <div class="md-layout md-gutter md-alignment-center-center">
+                                <div class="md-layout-item">
                                     <img src="~/Images/icons8-fridge-96.png" />
                                     <br /><h1>冷藏</h1>
                                 </div>
-                                <div class="md-layout-item center">
+                                <div class="md-layout-item">
                                     <img src="~/Images/icons8-table-96.png" />
                                     <br /><h1>常溫</h1>
                                 </div>
                             </div>
                         </md-step>
-                        <md-step id="e" md-label="外觀" class="row">
-                            <div class="md-layout md-gutter md-alignment-center">
+
+                        <md-step id="e" md-label="外觀" md-description="蛋蛋帥不帥和漂不漂也有關係唷!">
+                            <div class="md-layout md-gutter md-alignment-center-center">
                                 <div class="md-layout-item center">
                                     <img src="~/Images/egg.png" />
                                 </div>
@@ -224,20 +237,13 @@
                                     <div class="md-layout-item md-layout md-gutter">
                                         <div class="md-layout-item"></div>
                                     </div>
-                                    <div class="md-layout-item md-layout md-gutter">
-                                        <div class="md-layout-item">
-                                            <md-field>
-                                                <label>補充說明</label>
-                                                <md-textarea></md-textarea>
-                                            </md-field>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </md-step>
-                        <md-step id="f" md-label="健康指數">
-                            <div class="md-layout md-gutter md-alignment-center">
-                                <div class="md-layout-item center">
+
+                        <md-step id="f" md-label="健康指數" md-description="根據你的蛋蛋狀況算出你的蛋蛋新鮮度!">
+                            <div class="md-layout md-gutter md-alignment-center-center">
+                                <div class="md-layout-item">
                                     健康指數
                                 </div>
                             </div>
@@ -256,15 +262,13 @@
         <!-- ... 蛋蛋知識區 ... -->
         <div class="block" id="infoVisible">
             <md-toolbar class="md-primary" md-theme="purple_theme">
- 
                 <span class="md-title">
                     <img src="~/Images/infoVisible.png" width="50" />
                     蛋蛋長知識
                 </span>
-
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
-                        <md-icon>menu</md-icon>
+                        <md-icon><i class="fas fa-bars"></i></md-icon>
                     </md-button>
                 </div>
             </md-toolbar>
@@ -272,37 +276,40 @@
                 <template v-if="nowFunc == 'infoVisible'">
                     <md-tabs>
                         <md-tab id="tab-info" md-label="危雞知識庫">
-                            <div id="infoLab" style="overflow:auto;">
+                            <md-content id="infoLab" style="overflow:auto;" class="md-scrollbar">
                                 <template :md-active.sync="info.isShow">
                                     <div class="md-layout md-gutter md-alignment-center" v-for="i in info.infoList.length">
                                         <div class="md-layout-item">
                                             <md-card>
                                                 <md-card-header>
-                                                    <div class="md-layout md-gutter md-alignment-top-center">
-                                                        <div class="md-layout-item md-size-5">
-                                                            <i class="fab fa-quora"></i>
+                                                    <md-content class="md-scrollbar">
+                                                        <div class="md-layout md-gutter md-alignment-top-center">
+                                                            <div class="md-layout-item md-size-5">
+                                                                <i class="fab fa-quora"></i>
+                                                            </div>
+                                                            <div class="md-layout-item">
+                                                                <div class="md-title">{{info.infoList[i-1].Q_DESC}}</div>
+                                                            </div>
                                                         </div>
-                                                        <div class="md-layout-item">
-                                                            <div class="md-title">{{info.infoList[i-1].Q_DESC}}</div>
-                                                        </div>
-                                                    </div>
+                                                    </md-content>
                                                 </md-card-header>
                                                 <md-card-content>
-                                                    <div class="md-layout md-gutter md-alignment-top-center">
-                                                        <div class="md-layout-item md-size-5">
-                                                            <i class="fas fa-check-circle"></i>
+                                                    <md-content class="md-scrollbar">
+                                                        <div class="md-layout md-gutter md-alignment-top-center">
+                                                            <div class="md-layout-item md-size-5">
+                                                                <i class="fas fa-check-circle"></i>
+                                                            </div>
+                                                            <div class="md-layout-item">
+                                                                {{info.infoList[i-1].Q_MEMO}}
+                                                            </div>
                                                         </div>
-                                                        <div class="md-layout-item">
-                                                            {{info.infoList[i-1].Q_MEMO}}
-                                                        </div>
-                                                    </div>
-
+                                                    </md-content>
                                                 </md-card-content>
                                             </md-card>
                                         </div>
                                     </div>
                                 </template>
-                            </div>
+                            </md-content>
                         </md-tab>
                         <md-tab id="tab-pages" md-label="危雞百顆小測驗" to="/components/tabs/pages">
 
@@ -329,30 +336,30 @@
 
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
-                        <md-icon>menu</md-icon>
+                        <md-icon><i class="fas fa-bars"></i></md-icon>
                     </md-button>
                 </div>
             </md-toolbar>
             <md-content>
                <template v-if="nowFunc == 'eventVisible'">
-                   <div id="eventCard" style="overflow:auto;" class="md-layout md-gutter md-alignment-center">
-                       <md-card v-for="i in 20">
-                           <md-card-media-cover>
-                               <md-card-media md-ratio="16:9">
-                                   <img src="https://vuematerial.io/assets/examples/card-sky.jpg" alt="Skyscraper">
+                   <md-content id="eventCard" style="overflow:auto;" class="md-layout md-gutter md-alignment-center md-scrollbar">
+                       <md-card v-for="i in event.eventList">
+                           <md-card-media-cover md-text-scrim>
+                               <md-card-media md-ratio="18:9">
+                                   <img v-bind:src="'Images/EVENT/'+i.EVENT_FILE" alt="Skyscraper">
                                </md-card-media>
                                <md-card-area>
                                    <md-card-header>
-                                       <span class="md-title">Without text background</span>
-                                       <span class="md-subhead">I bet you can't read this</span>
+                                       <span class="md-title">{{i.EVENT_DATE}}</span>
+                                       <span class="md-subhead">{{i.EVENT_DESC.substring(0, 20)}}...</span>
                                    </md-card-header>
                                    <md-card-actions>
-                                       <md-button>Neither this</md-button>
+                                       <md-button  :href="i.EVENT_URL" target="_blank">GO</md-button>
                                    </md-card-actions>
                                </md-card-area>
                            </md-card-media-cover>
                        </md-card>
-                   </div>
+                   </md-content>
                     
                </template>
                 <template v-else>
@@ -375,15 +382,39 @@
 
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
-                        <md-icon>menu</md-icon>
+                        <md-icon><i class="fas fa-bars"></i></md-icon>
                     </md-button>
                 </div>
             </md-toolbar>
             <md-content  >
                 <template  v-if="nowFunc == 'botVisible'">
                     <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item right">
+                            <i class="fab fa-line fa-10x md-primary" style="color: green;"></i>
+                            @*<br />LINE*@
+                        </div>
                         <div class="md-layout-item center">
-                            <i class="fab fa-line fa-10x md-primary"></i>
+                            <i class="fas fa-times fa-5x"></i>
+                        </div>
+                        <div class="md-layout-item left">
+                            <img src="~/Images/logo.png" width="150" />
+                            @*<br /><img src="~/Images/egg_data.png" width="50" />*@
+                        </div>  
+                    </div>
+                 
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                            <img src="~/Images/lineBotQRCode.jpg" />
+                        </div>
+                    </div>
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                            掃描QRCode 加入好友
+                        </div>
+                    </div>
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item center">
+                          
                         </div>
                     </div>
                 </template>
@@ -403,12 +434,12 @@
         <md-toolbar class="md-transparent" md-elevation="0">
             <div class="md-toolbar-section-start">
                 <md-button class="md-icon-button md-dense" v-on:click="showNavigation = !showNavigation">
-                    <md-icon>keyboard_arrow_right</md-icon>
+                    <md-icon><i class="fas fa-angle-right"></i></md-icon>
                 </md-button>
-            </div>
-            <span class="md-toolbar-section-start" v-on:click="toggleFunction(0)"><img style="margin-left:15px;" class="circle" src="~/Images/logo.png" width="40%" /></span>
-            <div class="md-toolbar-section-end">
-                <h4>危雞<br />百顆</h4>
+                <span v-on:click="toggleFunction(0)">
+                    <img style="margin-left:15px;" class="circle" src="~/Images/logo.png" width="50" />
+                    <img src="~/Images/egg_data.png" width="50" style="margin: 5px;" />
+                </span>
             </div>
         </md-toolbar>
         <md-list>
@@ -433,6 +464,7 @@
  
         </md-list>
     </md-drawer> <!-- ... 側邊選單 ... -->
+     
 </div>
 @section scripts {
     <script>
@@ -445,9 +477,9 @@
             setView: '',//設定指定頁面
             home: {},
             func: {},
-            test: { step:0, radio: '0', radio2: '0' },
+            test: { step: 0, radio: '0', radio2: '0', buy_date: '@(DateTime.Now.ToString("yyyy-MM-dd"))' },
             info: { infoList: [], infoTest:[],isShow:false},
-            event: {},
+            event: { eventList: [], isShow: false },
             bot: {},
         };
         var vm = new Vue({
@@ -456,7 +488,7 @@
             methods: {
                 toggleFunction: function (pView, pTime) {
                     //移動至指定功能
-                
+                    this.showNavigation = false;
                     pTime = !!pTime ? pTime : 500;
                     this.setView = pView;
                     console.log(this.setView);
@@ -517,7 +549,7 @@
            
             },//methods
             computed: {
-             
+                 
             },//computed
             watch: {
                 nowFunc: function (value) {
@@ -528,7 +560,11 @@
                         case 'eventVisible':
                             setTimeout(function () { $('#eventCard').css('height', window.innerHeight - $('#eventCard').offset().top); }, 500);
                             break;
+                        case 'testVisible':
+                            setTimeout(function () { $('#testSteppers').css('height', window.innerHeight - $('#testSteppers').offset().top); }, 500);
+                            break;
                         default:
+                            break;
                     }
                 }
             },//watch
@@ -553,8 +589,18 @@
                 }, (response) => {
 
                 });
-            
-            }//mounted
+                //取的Info資料
+                this.$http.post('/Home/getEvent').then((response) => {
+                    this.event.eventList = Object.assign([], response.data);
+                    vm.event.isShow = true;
+                }, (response) => {
+
+                });
+                //this.toggleFunction(2);
+            },//mounted
+            components: {
+                vuejsDatepicker 
+            }
         }).$mount("#MyApp");
     </script>
 }

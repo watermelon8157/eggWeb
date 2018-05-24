@@ -18,6 +18,18 @@ namespace eggWeb.Controllers
             VM_EGG vm = new VM_EGG();
             return View(vm);
         }
+
+        public JsonResult getInfo()
+        {
+            return Json(MvcApplication.global.egg_info_list);
+        }
+
+        public JsonResult getEvent()
+        {
+            return Json(MvcApplication.global.egg_event_list);
+        }
+
+        #region TEST
         public ActionResult Index2()
         {
             return View();
@@ -26,29 +38,7 @@ namespace eggWeb.Controllers
         {
             return View();
         }
-
-        public JsonResult getInfo()
-        {
-            List<EGG_INFO_Q_MST> list = new List<EGG_INFO_Q_MST>();
-            string actioName = "getInfo";
-            try
-            {
-                DBLink link = new DBLink();
-                LogTool.SaveLogMessage(link.dbPath, actioName, this.csName);
-                string sql = "SELECT * FROM EGG_INFO_Q_MST";
-                list = link.DBA.getSqlDataTable<EGG_INFO_Q_MST>(sql);
-                if (link.DBA.hasLastError)
-                {
-                    LogTool.SaveLogMessage(link.DBA.lastError, actioName, this.csName);
-                }
-            }
-            catch (Exception ex)
-            {
-                LogTool.SaveLogMessage(ex, actioName,this.csName);
-            }
-            
-            return Json(list);
-        }
+        #endregion
 
     }
 }

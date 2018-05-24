@@ -220,6 +220,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\CountyController.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TESTController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,6 +228,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DB\DBLink.cs" />
+    <Compile Include="Models\Global.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LogTool.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -301,6 +303,34 @@
     <Content Include="Images\egg_function.jpg" />
     <Content Include="Images\egg_temp.png" />
     <Content Include="Images\eventVisible.png" />
+    <Content Include="Images\EVENT\1_1.jpg" />
+    <Content Include="Images\EVENT\1_11.jpg" />
+    <Content Include="Images\EVENT\1_12.jpg" />
+    <Content Include="Images\EVENT\1_13.jpg" />
+    <Content Include="Images\EVENT\1_15.jpg" />
+    <Content Include="Images\EVENT\1_16.jpg" />
+    <Content Include="Images\EVENT\1_17.jpg" />
+    <Content Include="Images\EVENT\1_18.jpg" />
+    <Content Include="Images\EVENT\1_19.jpg" />
+    <Content Include="Images\EVENT\1_21.jpg" />
+    <Content Include="Images\EVENT\1_22.jpg" />
+    <Content Include="Images\EVENT\1_23.jpg" />
+    <Content Include="Images\EVENT\1_24.jpg" />
+    <Content Include="Images\EVENT\1_25.jpg" />
+    <Content Include="Images\EVENT\1_26.jpg" />
+    <Content Include="Images\EVENT\1_27.jpg" />
+    <Content Include="Images\EVENT\1_29.jpg" />
+    <Content Include="Images\EVENT\1_30.jpg" />
+    <Content Include="Images\EVENT\1_31.jpg" />
+    <Content Include="Images\EVENT\1_32.jpg" />
+    <Content Include="Images\EVENT\1_34.jpg" />
+    <Content Include="Images\EVENT\1_35.jpg" />
+    <Content Include="Images\EVENT\1_4.jpg" />
+    <Content Include="Images\EVENT\1_5.jpg" />
+    <Content Include="Images\EVENT\1_6.jpg" />
+    <Content Include="Images\EVENT\1_7.jpg" />
+    <Content Include="Images\EVENT\1_8.jpg" />
+    <Content Include="Images\EVENT\1_9.jpg" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\go.png" />
     <Content Include="Images\go.svg" />
@@ -308,9 +338,36 @@
     <Content Include="Images\icons8-fridge-96.png" />
     <Content Include="Images\icons8-table-96.png" />
     <Content Include="Images\infoVisible.png" />
+    <Content Include="Images\lineBotQRCode.jpg" />
     <Content Include="Images\lineBotQRCode.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo.svg" />
+    <Content Include="Images\logo2.png" />
+    <Content Include="Images\logo\android-icon-144x144.png" />
+    <Content Include="Images\logo\android-icon-192x192.png" />
+    <Content Include="Images\logo\android-icon-36x36.png" />
+    <Content Include="Images\logo\android-icon-48x48.png" />
+    <Content Include="Images\logo\android-icon-72x72.png" />
+    <Content Include="Images\logo\android-icon-96x96.png" />
+    <Content Include="Images\logo\apple-icon-114x114.png" />
+    <Content Include="Images\logo\apple-icon-120x120.png" />
+    <Content Include="Images\logo\apple-icon-144x144.png" />
+    <Content Include="Images\logo\apple-icon-152x152.png" />
+    <Content Include="Images\logo\apple-icon-180x180.png" />
+    <Content Include="Images\logo\apple-icon-57x57.png" />
+    <Content Include="Images\logo\apple-icon-60x60.png" />
+    <Content Include="Images\logo\apple-icon-72x72.png" />
+    <Content Include="Images\logo\apple-icon-76x76.png" />
+    <Content Include="Images\logo\apple-icon-precomposed.png" />
+    <Content Include="Images\logo\apple-icon.png" />
+    <Content Include="Images\logo\browserconfig.xml" />
+    <Content Include="Images\logo\favicon-16x16.png" />
+    <Content Include="Images\logo\favicon-32x32.png" />
+    <Content Include="Images\logo\favicon-96x96.png" />
+    <Content Include="Images\logo\ms-icon-144x144.png" />
+    <Content Include="Images\logo\ms-icon-150x150.png" />
+    <Content Include="Images\logo\ms-icon-310x310.png" />
+    <Content Include="Images\logo\ms-icon-70x70.png" />
     <Content Include="Images\map.png" />
     <Content Include="Images\testVisible.png" />
     <Content Include="Images\專題網頁-24.png" />
@@ -350,6 +407,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\DaTa\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -371,6 +429,7 @@
     <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
     <Content Include="plugin\vuematerial\README.md" />
     <Content Include="Models\DB\EGG_DB.db" />
+    <Content Include="Images\logo\manifest.json" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\County\Index.cshtml" />
     <Content Include="Scripts\county\county.shp" />

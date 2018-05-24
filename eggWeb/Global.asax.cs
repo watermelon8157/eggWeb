@@ -1,4 +1,6 @@
-﻿using System;
+﻿using eggWeb.Models;
+using eggWeb.Models.viewmodel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,12 +12,17 @@ namespace eggWeb
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static Global global { get; set; }
+
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            MvcApplication.global = new Global();
+
         }
     }
 }

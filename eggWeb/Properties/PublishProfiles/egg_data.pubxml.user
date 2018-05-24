@@ -6,7 +6,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\Desktop\WebSite\egg</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\Desktop\WebSite\EGG_APP</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -25,7 +25,7 @@
       <publishTime>11/25/2017 18:18:42</publishTime>
     </File>
     <File Include="bin/eggWeb.dll">
-      <publishTime>05/16/2018 20:40:04</publishTime>
+      <publishTime>05/24/2018 21:49:17</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -435,6 +435,9 @@
     <File Include="Content/vuetify/vuetify.min.js">
       <publishTime>04/19/2018 06:20:27</publishTime>
     </File>
+    <File Include="EGGWebService.asmx">
+      <publishTime>05/22/2018 17:59:30</publishTime>
+    </File>
     <File Include="favicon.ico">
       <publishTime>04/19/2018 21:35:06</publishTime>
     </File>
@@ -471,11 +474,95 @@
     <File Include="Images/egg_temp.png">
       <publishTime>05/15/2018 01:18:10</publishTime>
     </File>
+    <File Include="Images/EVENT/1_1.jpg">
+      <publishTime>05/19/2018 09:21:04</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_11.jpg">
+      <publishTime>05/19/2018 09:21:17</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_12.jpg">
+      <publishTime>05/19/2018 09:21:18</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_13.jpg">
+      <publishTime>05/19/2018 09:21:19</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_15.jpg">
+      <publishTime>05/19/2018 09:21:21</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_16.jpg">
+      <publishTime>05/19/2018 09:21:21</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_17.jpg">
+      <publishTime>05/19/2018 09:21:22</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_18.jpg">
+      <publishTime>05/19/2018 09:21:23</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_19.jpg">
+      <publishTime>05/19/2018 09:21:25</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_21.jpg">
+      <publishTime>05/19/2018 09:21:28</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_22.jpg">
+      <publishTime>05/19/2018 09:21:29</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_23.jpg">
+      <publishTime>05/19/2018 09:21:30</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_24.jpg">
+      <publishTime>05/19/2018 09:21:31</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_25.jpg">
+      <publishTime>05/19/2018 09:21:32</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_26.jpg">
+      <publishTime>05/19/2018 09:21:32</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_27.jpg">
+      <publishTime>05/19/2018 09:21:34</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_29.jpg">
+      <publishTime>05/19/2018 09:21:36</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_30.jpg">
+      <publishTime>05/19/2018 09:21:38</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_31.jpg">
+      <publishTime>05/19/2018 09:21:40</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_32.jpg">
+      <publishTime>05/19/2018 09:21:42</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_34.jpg">
+      <publishTime>05/19/2018 09:21:46</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_35.jpg">
+      <publishTime>05/19/2018 09:21:48</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_4.jpg">
+      <publishTime>05/19/2018 09:21:09</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_5.jpg">
+      <publishTime>05/19/2018 09:21:10</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_6.jpg">
+      <publishTime>05/19/2018 09:21:11</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_7.jpg">
+      <publishTime>05/19/2018 09:21:12</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_8.jpg">
+      <publishTime>05/19/2018 09:21:14</publishTime>
+    </File>
+    <File Include="Images/EVENT/1_9.jpg">
+      <publishTime>05/19/2018 09:21:15</publishTime>
+    </File>
     <File Include="Images/eventVisible.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
     </File>
     <File Include="Images/favicon.ico">
-      <publishTime>05/15/2018 14:09:24</publishTime>
+      <publishTime>05/19/2018 00:40:36</publishTime>
     </File>
     <File Include="Images/go.png">
       <publishTime>05/16/2018 19:06:31</publishTime>
@@ -495,14 +582,98 @@
     <File Include="Images/infoVisible.png">
       <publishTime>05/15/2018 01:18:04</publishTime>
     </File>
+    <File Include="Images/lineBotQRCode.jpg">
+      <publishTime>05/19/2018 08:30:11</publishTime>
+    </File>
     <File Include="Images/lineBotQRCode.png">
       <publishTime>05/16/2018 20:05:41</publishTime>
     </File>
     <File Include="Images/logo.png">
-      <publishTime>05/15/2018 01:18:02</publishTime>
+      <publishTime>05/19/2018 08:39:17</publishTime>
     </File>
     <File Include="Images/logo.svg">
       <publishTime>04/28/2018 04:54:03</publishTime>
+    </File>
+    <File Include="Images/logo/android-icon-144x144.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/android-icon-192x192.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/android-icon-36x36.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/android-icon-48x48.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/android-icon-72x72.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/android-icon-96x96.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-114x114.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-120x120.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-144x144.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-152x152.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-180x180.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-57x57.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-60x60.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-72x72.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-76x76.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon-precomposed.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/apple-icon.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/browserconfig.xml">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/favicon-16x16.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/favicon-32x32.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/favicon-96x96.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/manifest.json">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/ms-icon-144x144.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/ms-icon-150x150.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/ms-icon-310x310.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo/ms-icon-70x70.png">
+      <publishTime>05/19/2018 00:40:42</publishTime>
+    </File>
+    <File Include="Images/logo2.png">
+      <publishTime>05/15/2018 01:18:02</publishTime>
     </File>
     <File Include="Images/map.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
@@ -517,7 +688,7 @@
       <publishTime>10/17/2017 16:07:37</publishTime>
     </File>
     <File Include="Models/DB/EGG_DB.db">
-      <publishTime>05/16/2018 12:19:38</publishTime>
+      <publishTime>05/19/2018 09:24:45</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>05/15/2018 18:13:09</publishTime>
@@ -598,7 +769,7 @@
       <publishTime>04/28/2018 06:47:44</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/16/2018 19:37:07</publishTime>
+      <publishTime>05/24/2018 21:36:39</publishTime>
     </File>
     <File Include="Views/Home/Index2.cshtml">
       <publishTime>04/28/2018 11:35:55</publishTime>
@@ -610,7 +781,7 @@
       <publishTime>04/19/2018 21:35:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/15/2018 14:10:48</publishTime>
+      <publishTime>05/22/2018 20:54:31</publishTime>
     </File>
     <File Include="Views/TEST/Index.cshtml">
       <publishTime>05/05/2018 11:28:00</publishTime>
