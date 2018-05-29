@@ -31,17 +31,17 @@ namespace eggWeb.Models
             try
             {
                 DBLink link = new DBLink();
-                LogTool.SaveLogMessage(link.dbPath, actioName, this.csName);
+                LogTool.Info(link.dbPath, actioName, this.csName);
                 string sql = "SELECT * FROM EGG_INFO_Q_MST";
                 this.egg_info_list = link.DBA.getSqlDataTable<EGG_INFO_Q_MST>(sql);
                 if (link.DBA.hasLastError)
                 {
-                    LogTool.SaveLogMessage(link.DBA.lastError, actioName, this.csName);
+                    LogTool.Fatal(link.DBA.lastError, actioName, this.csName);
                 }
             }
             catch (Exception ex)
             {
-                LogTool.SaveLogMessage(ex, actioName, this.csName);
+                LogTool.Fatal(ex, actioName, this.csName);
             }
 
             #endregion
@@ -53,17 +53,17 @@ namespace eggWeb.Models
             try
             {
                 DBLink link = new DBLink();
-                LogTool.SaveLogMessage(link.dbPath, actioName, this.csName);
+                LogTool.Info(link.dbPath, actioName, this.csName);
                 string sql = "SELECT * FROM EGG_EVENT_DATA WHERE EVENT_IMAGE <> '0'";
                 this.egg_event_list = link.DBA.getSqlDataTable<EGG_EVENT_DATA>(sql);
                 if (link.DBA.hasLastError)
                 {
-                    LogTool.SaveLogMessage(link.DBA.lastError, actioName, this.csName);
+                    LogTool.Fatal(link.DBA.lastError, actioName, this.csName);
                 }
             }
             catch (Exception ex)
             {
-                LogTool.SaveLogMessage(ex, actioName, this.csName);
+                LogTool.Fatal(ex, actioName, this.csName);
             }
 
             #endregion

@@ -5,13 +5,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>危雞百顆</title>
-    <link rel="icon" href="~/Images/favicon.ico">
+    <link rel="icon" href="~/Images/logo.svg">
     <link href="~/Content/fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.min.css" rel="stylesheet" />
     @Styles.Render("~/Content/css")
     <link href="~/plugin/vuematerial/vue-material.min.css" rel="stylesheet" />
     <link href="~/Content/fonts.googleapis.css" rel="stylesheet" />
     <link href="~/Content/rcs_theme.css" rel="stylesheet" />
-     
 </head>
 <body >
     @RenderBody()
@@ -20,7 +19,7 @@
     <script src="~/Scripts/vuejs-datepicker.min.js"></script>
     <script src="~/plugin/vuematerial/vue-material.min.js"></script>
     <script>
-        Vue.use(VueMaterial.default)
+        Vue.use(VueMaterial.default);
     </script>
     @RenderSection("scripts", required: false)
 </body>

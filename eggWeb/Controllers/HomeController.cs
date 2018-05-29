@@ -16,6 +16,11 @@ namespace eggWeb.Controllers
         public ActionResult Index()
         {
             VM_EGG vm = new VM_EGG();
+            vm.tabList = MvcApplication.global.egg_info_list.GroupBy(y => new { y.M_DESC, y.M_ID }).Select(x => new EGG_INFO_Q_MST()
+            {
+                M_ID = x.Key.M_ID,
+                M_DESC = x.Key.M_DESC
+            }).Distinct().ToList();
             return View(vm);
         }
 

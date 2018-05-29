@@ -25,7 +25,7 @@
       <publishTime>11/25/2017 18:18:42</publishTime>
     </File>
     <File Include="bin/eggWeb.dll">
-      <publishTime>05/24/2018 21:49:17</publishTime>
+      <publishTime>05/28/2018 22:42:04</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -459,6 +459,12 @@
     <File Include="Images/botVisible.png">
       <publishTime>05/15/2018 01:18:04</publishTime>
     </File>
+    <File Include="Images/bot_fun.svg">
+      <publishTime>05/24/2018 01:25:48</publishTime>
+    </File>
+    <File Include="Images/bot_title.svg">
+      <publishTime>05/24/2018 01:25:52</publishTime>
+    </File>
     <File Include="Images/date.png">
       <publishTime>04/28/2018 08:36:14</publishTime>
     </File>
@@ -561,6 +567,12 @@
     <File Include="Images/eventVisible.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
     </File>
+    <File Include="Images/event_fun.svg">
+      <publishTime>05/24/2018 01:25:48</publishTime>
+    </File>
+    <File Include="Images/event_title.svg">
+      <publishTime>05/24/2018 01:25:50</publishTime>
+    </File>
     <File Include="Images/favicon.ico">
       <publishTime>05/19/2018 00:40:36</publishTime>
     </File>
@@ -582,6 +594,12 @@
     <File Include="Images/infoVisible.png">
       <publishTime>05/15/2018 01:18:04</publishTime>
     </File>
+    <File Include="Images/info_fun.svg">
+      <publishTime>05/24/2018 01:25:46</publishTime>
+    </File>
+    <File Include="Images/info_title.svg">
+      <publishTime>05/24/2018 01:25:50</publishTime>
+    </File>
     <File Include="Images/lineBotQRCode.jpg">
       <publishTime>05/19/2018 08:30:11</publishTime>
     </File>
@@ -592,7 +610,7 @@
       <publishTime>05/19/2018 08:39:17</publishTime>
     </File>
     <File Include="Images/logo.svg">
-      <publishTime>04/28/2018 04:54:03</publishTime>
+      <publishTime>05/24/2018 01:25:48</publishTime>
     </File>
     <File Include="Images/logo/android-icon-144x144.png">
       <publishTime>05/19/2018 00:40:42</publishTime>
@@ -675,11 +693,20 @@
     <File Include="Images/logo2.png">
       <publishTime>05/15/2018 01:18:02</publishTime>
     </File>
+    <File Include="Images/logo_text.svg">
+      <publishTime>05/24/2018 01:25:48</publishTime>
+    </File>
     <File Include="Images/map.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
     </File>
     <File Include="Images/testVisible.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
+    </File>
+    <File Include="Images/test_fun.svg">
+      <publishTime>05/24/2018 01:25:48</publishTime>
+    </File>
+    <File Include="Images/test_title.svg">
+      <publishTime>05/24/2018 01:25:52</publishTime>
     </File>
     <File Include="Images/專題網頁-24.png">
       <publishTime>05/15/2018 01:18:16</publishTime>
@@ -769,7 +796,7 @@
       <publishTime>04/28/2018 06:47:44</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/24/2018 21:36:39</publishTime>
+      <publishTime>05/26/2018 17:36:52</publishTime>
     </File>
     <File Include="Views/Home/Index2.cshtml">
       <publishTime>04/28/2018 11:35:55</publishTime>
@@ -781,7 +808,7 @@
       <publishTime>04/19/2018 21:35:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/22/2018 20:54:31</publishTime>
+      <publishTime>05/26/2018 14:01:43</publishTime>
     </File>
     <File Include="Views/TEST/Index.cshtml">
       <publishTime>05/05/2018 11:28:00</publishTime>

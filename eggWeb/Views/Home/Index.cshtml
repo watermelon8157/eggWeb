@@ -1,6 +1,22 @@
 ﻿@using eggWeb.Models.viewmodel
 @model VM_EGG
 <style>
+    .nav-film-x {
+	background-color: #ffffff;
+	border-top: 6px dashed  #000;
+	border-bottom: 6px dashed  #000;
+	box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+	margin-bottom: 1px;
+  }
+    .nav-film-y {
+	background-color: #ffffff;
+	border-left: 6px dashed  #000;
+	border-right: 6px dashed  #000;
+	box-shadow: inset 0 -1px 0 0 #000, inset 0 1px 0 0 #000, 0 1px 0 0 #000, 0 -1px 0 0 #000;
+	margin-bottom: 1px;
+   }
+
+
     body {
         overflow: hidden;
     }
@@ -57,9 +73,29 @@
         display: inline-block;
         vertical-align: top;
       }
+
+      #scrollTopBtn{
+              display: none;
+              position: fixed;
+              bottom: 20px;
+              right: 30px;
+              z-index: 99;
+              font-size: 18px;
+              border: none;
+              outline: none;
+              background-color: red;
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+         }
+     
 </style>
 <div class="page-container" id="MyApp">
-    
+    @*<md-button class="md-icon-button" id="scrollTopBtn">
+            <md-icon><i class="fas fa-home"></i></md-icon>
+        </md-button>*@
+    <button v-on:click="topFunction" id="scrollTopBtn" title="Go to top"><i class="fas fa-home"></i></button>
     <!-- ... 畫面主功能 ... -->
     <div id="content">
         <!-- ... 首頁 ... -->
@@ -67,7 +103,7 @@
             <md-content>
                 <div class="md-layout md-gutter md-alignment-center">
                     <div class="md-layout-item center">
-                        <img src="~/Images/logo.png" width="150" />
+                        <img src="~/Images/logo.svg" width="150" />
                     </div>
                 </div>
                 <div class="md-layout md-gutter md-alignment-center">
@@ -89,43 +125,32 @@
             </md-content>
         </div> <!-- ... 首頁 ... -->
         <!-- ... 功能畫面 ... -->
-        <div class="block use-flexbox" id="funcVisible">
-            <md-content>
-                <div class="md-layout md-gutter md-alignment-center">
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(2)">
-                        <img src="~/Images/testVisible.png" />
+        <div class="block" id="funcVisible" >
+            <md-content id="func_block" style="overflow:auto;" class="md-scrollbar">
+                <div  class="md-layout md-gutter md-alignment-center">
+                    <div class="md-layout md-gutter md-alignment-center">
+                        <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100 center pointer">
+                            <img src="~/Images/test_fun.svg" width="250" v-on:click="toggleFunction(2)" />
+                        </div>
+                        <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100 center pointer">
+                            <img src="~/Images/info_fun.svg" width="250" v-on:click="toggleFunction(3)" />
+                        </div>
+                        <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100 center pointer">
+                            <img src="~/Images/event_fun.svg" width="250" v-on:click="toggleFunction(4)" />
+                        </div>
+                        <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100 center pointer">
+                            <img src="~/Images/bot_fun.svg" width="250" v-on:click="toggleFunction(5)" />
+                        </div>
                     </div>
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(3)">
-                        <img src="~/Images/infoVisible.png" />
-                    </div>
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(4)">
-                        <img src="~/Images/eventVisible.png" />
-                    </div>
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(5)">
-                        <img src="~/Images/botVisible.png" />
-                    </div>
-                </div>
-                <div class="md-layout md-gutter md-alignment-center">
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(2)">蛋蛋檢測區</div>
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(3)">蛋蛋長知識</div>
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(4)">蛋蛋大事件</div>
-                    <div class="md-layout-item center pointer" v-on:click="toggleFunction(5)">蛋蛋Bot</div>
-                </div>
-                <div class="md-layout md-gutter md-alignment-center">
-                    <div class="md-layout-item center">測試你的蛋蛋健不健康</div>
-                    <div class="md-layout-item center">蛋蛋汁多少，你對你的雞蛋了解嗎?</div>
-                    <div class="md-layout-item center">蛋蛋的一生，以台灣新聞為例</div>
-                    <div class="md-layout-item center">LineBot，告訴你蛋蛋234</div>
                 </div>
             </md-content>
         </div><!-- ... 功能畫面 ... -->
         <!-- ... 蛋蛋測驗區 ... -->
         <div class="block" id="testVisible">
             <md-toolbar class="md-primary">
-                <span class="md-title">
-                    <img src="~/Images/testVisible.png" width="50" />
-                    蛋蛋測試區
-                </span>
+                <div class="md-toolbar-section-start">
+                    <img src="~/Images/test_title.svg" />
+                </div>
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
                         <md-icon><i class="fas fa-bars"></i></md-icon>
@@ -262,10 +287,9 @@
         <!-- ... 蛋蛋知識區 ... -->
         <div class="block" id="infoVisible">
             <md-toolbar class="md-primary" md-theme="purple_theme">
-                <span class="md-title">
-                    <img src="~/Images/infoVisible.png" width="50" />
-                    蛋蛋長知識
-                </span>
+                <div class="md-toolbar-section-start">
+                    <img src="~/Images/info_title.svg" />
+                </div>
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
                         <md-icon><i class="fas fa-bars"></i></md-icon>
@@ -273,67 +297,92 @@
                 </div>
             </md-toolbar>
             <md-content>
-                <template v-if="nowFunc == 'infoVisible'">
-                    <md-tabs>
-                        <md-tab id="tab-info" md-label="危雞知識庫">
-                            <md-content id="infoLab" style="overflow:auto;" class="md-scrollbar">
-                                <template :md-active.sync="info.isShow">
-                                    <div class="md-layout md-gutter md-alignment-center" v-for="i in info.infoList.length">
-                                        <div class="md-layout-item">
-                                            <md-card>
-                                                <md-card-header>
-                                                    <md-content class="md-scrollbar">
-                                                        <div class="md-layout md-gutter md-alignment-top-center">
-                                                            <div class="md-layout-item md-size-5">
-                                                                <i class="fab fa-quora"></i>
-                                                            </div>
-                                                            <div class="md-layout-item">
-                                                                <div class="md-title">{{info.infoList[i-1].Q_DESC}}</div>
-                                                            </div>
-                                                        </div>
-                                                    </md-content>
-                                                </md-card-header>
-                                                <md-card-content>
-                                                    <md-content class="md-scrollbar">
-                                                        <div class="md-layout md-gutter md-alignment-top-center">
-                                                            <div class="md-layout-item md-size-5">
-                                                                <i class="fas fa-check-circle"></i>
-                                                            </div>
-                                                            <div class="md-layout-item">
-                                                                {{info.infoList[i-1].Q_MEMO}}
-                                                            </div>
-                                                        </div>
-                                                    </md-content>
-                                                </md-card-content>
-                                            </md-card>
-                                        </div>
-                                    </div>
-                                </template>
-                            </md-content>
-                        </md-tab>
-                        <md-tab id="tab-pages" md-label="危雞百顆小測驗" to="/components/tabs/pages">
-
-                        </md-tab>
-                    </md-tabs>
-                </template>
-                <template v-else>
-                    <div class="md-layout md-gutter md-alignment-center">
-                        <div class="md-layout-item center">
-                            <md-progress-spinner :md-diameter="100" :md-stroke="10" md-mode="indeterminate"></md-progress-spinner>
-                        </div>
-                    </div>
-                </template>
+                <md-menu :md-active.sync="toggleInfoMenu" md-direction="bottom-end">
+                    <md-button md-menu-trigger>危雞知識庫<strong>{{toggleInfoMenuTitle}}</strong></md-button>
+                    <md-menu-content>
+                        <md-menu-item v-for="j in tabList" v-on:click="toggleInfoMenu = !toggleInfoMenu;toggleInfoMenuTitle = ':'+j.M_DESC;">
+                            <md-button>
+                                {{j.M_DESC}}
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+                <md-menu >
+                    <md-button>危雞百顆小測驗</md-button>
+                </md-menu>
+                 <md-content>
+                     <template v-if="nowFunc == 'infoVisible'">
+                         <template :md-active.sync="info.isShow">
+                             <md-content v-for="j in tabList" :id="'tab-type'+j.M_ID" :md-label="j.M_DESC" v-show="toggleInfoMenuTitle == ':'+j.M_DESC"  >
+                                 <md-content :id="'tab-type'+j.M_ID + 'content'" style="overflow:auto;">
+                                     <div class="md-layout md-gutter md-alignment-center" v-for="i in info.infoList.filter(x => x.M_ID == j.M_ID)">
+                                         <div class="md-layout-item">
+                                             <md-card>
+                                                 <md-card-header>
+                                                     <md-content class="md-scrollbar">
+                                                         <div class="md-layout md-gutter md-alignment-top-center">
+                                                             <div class="md-layout-item md-size-5">
+                                                                 <i class="fab fa-quora"></i>
+                                                             </div>
+                                                             <div class="md-layout-item">
+                                                                 <div class="md-title">{{i.Q_DESC}}</div>
+                                                             </div>
+                                                         </div>
+                                                     </md-content>
+                                                 </md-card-header>
+                                                 <md-card-content>
+                                                     <md-content class="md-scrollbar" v-if="i.isShow">
+                                                         <div class="md-layout md-gutter md-alignment-top-center">
+                                                             <div class="md-layout-item md-size-5">
+                                                                 <i class="fas fa-check-circle"></i>
+                                                             </div>
+                                                             <div class="md-layout-item">
+                                                                 {{i.Q_MEMO}}
+                                                             </div>
+                                                         </div>
+                                                     </md-content>
+                                                     <md-content class="md-scrollbar" v-else>
+                                                         <div class="md-layout md-gutter md-alignment-top-center">
+                                                             <div class="md-layout-item md-size-5">
+                                                                 <i class="fas fa-check-circle"></i>
+                                                             </div>
+                                                             <div class="md-layout-item pointer">
+                                                                 <md-list>
+                                                                     <md-list-item v-on:click="i.isShow = !i.isShow">
+                                                                         <i class="fas fa-eye"></i>
+                                                                         <span class="md-list-item-text">&ensp;show me Anser</span>
+                                                                     </md-list-item>
+                                                                 </md-list>
+                                                             </div>
+                                                         </div>
+                                                     </md-content>
+                                                 </md-card-content>
+                                             </md-card>
+                                         </div>
+                                     </div>
+                                 </md-content>
+                             </md-content>
+                         </template>
+                     </template>
+                     <template v-else>
+                         <div class="md-layout md-gutter md-alignment-center">
+                             <div class="md-layout-item center">
+                                 <md-progress-spinner :md-diameter="100" :md-stroke="10" md-mode="indeterminate"></md-progress-spinner>
+                             </div>
+                         </div>
+                     </template>
+                 </md-content>
+                 
+                
             </md-content>
         </div> <!-- ... 蛋蛋知識區 ... -->
         <!-- ... 蛋蛋事件區 ... -->
         <div class="block" id="eventVisible">
             <md-toolbar class="md-primary" md-theme="orange_theme">
  
-                <span class="md-title">
-                    <img src="~/Images/eventVisible.png"width="50" />
-                    蛋蛋大事件
-                </span>
-
+                <div class="md-toolbar-section-start">
+                    <img src="~/Images/event_title.svg" />
+                </div>
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
                         <md-icon><i class="fas fa-bars"></i></md-icon>
@@ -342,25 +391,37 @@
             </md-toolbar>
             <md-content>
                <template v-if="nowFunc == 'eventVisible'">
-                   <md-content id="eventCard" style="overflow:auto;" class="md-layout md-gutter md-alignment-center md-scrollbar">
-                       <md-card v-for="i in event.eventList">
-                           <md-card-media-cover md-text-scrim>
-                               <md-card-media md-ratio="18:9">
-                                   <img v-bind:src="'Images/EVENT/'+i.EVENT_FILE" alt="Skyscraper">
-                               </md-card-media>
-                               <md-card-area>
-                                   <md-card-header>
-                                       <span class="md-title">{{i.EVENT_DATE}}</span>
-                                       <span class="md-subhead">{{i.EVENT_DESC.substring(0, 20)}}...</span>
-                                   </md-card-header>
-                                   <md-card-actions>
-                                       <md-button  :href="i.EVENT_URL" target="_blank">GO</md-button>
-                                   </md-card-actions>
-                               </md-card-area>
-                           </md-card-media-cover>
-                       </md-card>
+                   <md-content id="eventCard" style="overflow:auto;" class="md-scrollbar">
+                       <div class="md-layout md-gutter md-alignment-center" v-for="i in event.eventList">
+                           <div class="md-layout-item">
+                               <span class="md-title">{{i.EVENT_DATE}}</span><br />
+                               <span class="md-title">{{i.EVENT_TITLE}}</span>
+                           </div>
+                           <div class="md-layout-item md-medium-size-40 md-small-size-40 md-xsmall-size-40 center pointer">
+                               <md-card>
+                                   <md-card-media-cover md-text-scrim>
+                                       <md-card-media md-ratio="16:9">
+                                           <img v-bind:src="'@(Url.Content("~/Images/EVENT/"))'+i.EVENT_FILE" alt="Skyscraper" class="nav-film-y">
+                                       </md-card-media>
+
+                                       <md-card-area>
+                                           <md-card-header>
+                                           
+                                           </md-card-header>
+                                           <md-card-actions>
+                                               <md-button :href="i.EVENT_URL" target="_blank">GO</md-button>
+                                           </md-card-actions>
+                                       </md-card-area>
+                                   </md-card-media-cover>
+                               </md-card>
+                               
+                           </div>
+                          
+                           <div class="md-layout-item ">
+                               <span class="md-subhead">{{i.EVENT_DESC}}...</span>
+                           </div>
+                       </div>
                    </md-content>
-                    
                </template>
                 <template v-else>
                     <div class="md-layout md-gutter md-alignment-center">
@@ -375,10 +436,9 @@
         <div class="block" id="botVisible">
             <md-toolbar class="md-primary" md-theme="green_theme">
                
-                <span class="md-title">
-                    <img src="~/Images/botVisible.png" width="50" />
-                    蛋蛋Bot
-                </span>
+                <div class="md-toolbar-section-start">
+                    <img src="~/Images/bot_title.svg" />
+                </div>
 
                 <div class="md-toolbar-section-end">
                     <md-button class="md-icon-button" v-on:click="showNavigation = true">
@@ -397,7 +457,7 @@
                             <i class="fas fa-times fa-5x"></i>
                         </div>
                         <div class="md-layout-item left">
-                            <img src="~/Images/logo.png" width="150" />
+                            <img src="~/Images/logo.svg" width="150" />
                             @*<br /><img src="~/Images/egg_data.png" width="50" />*@
                         </div>  
                     </div>
@@ -437,38 +497,35 @@
                     <md-icon><i class="fas fa-angle-right"></i></md-icon>
                 </md-button>
                 <span v-on:click="toggleFunction(0)">
-                    <img style="margin-left:15px;" class="circle" src="~/Images/logo.png" width="50" />
-                    <img src="~/Images/egg_data.png" width="50" style="margin: 5px;" />
+                    <img src="~/Images/logo_text.svg" width="150" />
                 </span>
             </div>
         </md-toolbar>
         <md-list>
  
             <md-list-item v-on:click="toggleFunction(2)">
-                <img src="~/Images/testVisible.png" width="50" style="margin: 5px;" />
-                <span class="md-list-item-text">蛋蛋測試區</span>
+                <img src="~/Images/test_title.svg" />
             </md-list-item>
 
             <md-list-item v-on:click="toggleFunction(3)">
-                <img src="~/Images/infoVisible.png" width="50" style="margin: 5px;" />
-                <span class="md-list-item-text">蛋蛋長知識</span>
+                <img src="~/Images/info_title.svg" />
             </md-list-item>
             <md-list-item v-on:click="toggleFunction(4)">
-                <img src="~/Images/eventVisible.png" width="50" style="margin: 5px;" />
-                <span class="md-list-item-text">蛋蛋大事件</span>
+                <img src="~/Images/event_title.svg" />
             </md-list-item>
             <md-list-item v-on:click="toggleFunction(5)">
-                <img src="~/Images/botVisible.png" width="50" style="margin: 5px;" />
-                <span class="md-list-item-text">蛋蛋Bot</span>
+                <img src="~/Images/bot_title.svg" />
             </md-list-item>
  
         </md-list>
     </md-drawer> <!-- ... 側邊選單 ... -->
-     
 </div>
 @section scripts {
     <script>
+ 
         var set_vm = {
+            toggleInfoMenu: false,
+            toggleInfoMenuTitle:'',
             nowFunc:'',
             DivList:[],
             showNavigation: false,//顯示側邊功能選單
@@ -484,7 +541,7 @@
         };
         var vm = new Vue({
             name: 'eggData',
-            data: Object.assign(set_vm),
+            data: Object.assign(set_vm, JSON.parse('@(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)))')),
             methods: {
                 toggleFunction: function (pView, pTime) {
                     //移動至指定功能
@@ -497,10 +554,21 @@
                             vm.scrolling = false;
                             vm.allowNextAnimation = false;
                             vm.nowFunc = vm.DivList[pView];
+                            vm.scrollFunction();
                             return false;
                         });
                     }, 200);
                 },//toggleFunction
+                scrollFunction:function(){
+                    if ($("#homeVisible").offset().top < 0) {
+                        document.getElementById("scrollTopBtn").style.display = "block";
+                    } else {
+                        document.getElementById("scrollTopBtn").style.display = "none";
+                    }
+                },//scrollFunction
+                topFunction:function(){
+                    this.toggleFunction(0);
+                },//topFunction
                 setScroll: function () {
                     //// should start at 0
                     var nowDiv = 0;
@@ -546,16 +614,24 @@
                         this.allowNextAnimation = true;
                     });
                 }//setScroll
-           
+
             },//methods
             computed: {
-                 
+
             },//computed
             watch: {
                 nowFunc: function (value) {
                     switch (value) {
                         case 'infoVisible':
-                            setTimeout(function () { $('#infoLab').css('height', window.innerHeight - $('#infoLab').offset().top); }, 500);
+                            setTimeout(function () {
+                                //$('#infoLab').css('height', window.innerHeight - $('#infoLab').offset().top);
+                                for (var i = 1; i < 7; i++) {
+                                    $('#tab-type' + i + 'content').css('height', window.innerHeight - $('#tab-type' + i + 'content').offset().top);
+                                }
+                            }, 500);
+                            break;
+                        case 'funcVisible':
+                            setTimeout(function () { $('#func_block').css('height', window.innerHeight - $('#func_block').offset().top); }, 500);
                             break;
                         case 'eventVisible':
                             setTimeout(function () { $('#eventCard').css('height', window.innerHeight - $('#eventCard').offset().top); }, 500);
@@ -581,7 +657,7 @@
                                 $("#" + this.DivList[3]).offset().top - topHeght,
                                 $("#" + this.DivList[4]).offset().top - topHeght,
                                 $("#" + this.DivList[5]).offset().top - topHeght];
-             
+
                 //取的Info資料
                 this.$http.post('/Home/getInfo').then((response) => {
                     this.info.infoList = Object.assign([], response.data);
@@ -599,7 +675,7 @@
                 //this.toggleFunction(2);
             },//mounted
             components: {
-                vuejsDatepicker 
+                vuejsDatepicker
             }
         }).$mount("#MyApp");
     </script>

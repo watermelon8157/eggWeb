@@ -56,6 +56,9 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MayaLibrary">
+      <HintPath>..\packages\MayaLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -297,6 +300,8 @@
     <Content Include="Content\materialize-v0.97.5\font\material-design-icons\Material-Design-Icons.ttf" />
     <Content Include="Content\materialize-v0.97.5\font\material-design-icons\Material-Design-Icons.eot" />
     <Content Include="Images\botVisible.png" />
+    <Content Include="Images\bot_fun.svg" />
+    <Content Include="Images\bot_title.svg" />
     <Content Include="Images\date.png" />
     <Content Include="Images\egg.png" />
     <Content Include="Images\egg_data.png" />
@@ -331,6 +336,8 @@
     <Content Include="Images\EVENT\1_7.jpg" />
     <Content Include="Images\EVENT\1_8.jpg" />
     <Content Include="Images\EVENT\1_9.jpg" />
+    <Content Include="Images\event_fun.svg" />
+    <Content Include="Images\event_title.svg" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\go.png" />
     <Content Include="Images\go.svg" />
@@ -338,38 +345,18 @@
     <Content Include="Images\icons8-fridge-96.png" />
     <Content Include="Images\icons8-table-96.png" />
     <Content Include="Images\infoVisible.png" />
+    <Content Include="Images\info_fun.svg" />
+    <Content Include="Images\info_title.svg" />
     <Content Include="Images\lineBotQRCode.jpg" />
     <Content Include="Images\lineBotQRCode.png" />
     <Content Include="Images\logo.png" />
     <Content Include="Images\logo.svg" />
     <Content Include="Images\logo2.png" />
-    <Content Include="Images\logo\android-icon-144x144.png" />
-    <Content Include="Images\logo\android-icon-192x192.png" />
-    <Content Include="Images\logo\android-icon-36x36.png" />
-    <Content Include="Images\logo\android-icon-48x48.png" />
-    <Content Include="Images\logo\android-icon-72x72.png" />
-    <Content Include="Images\logo\android-icon-96x96.png" />
-    <Content Include="Images\logo\apple-icon-114x114.png" />
-    <Content Include="Images\logo\apple-icon-120x120.png" />
-    <Content Include="Images\logo\apple-icon-144x144.png" />
-    <Content Include="Images\logo\apple-icon-152x152.png" />
-    <Content Include="Images\logo\apple-icon-180x180.png" />
-    <Content Include="Images\logo\apple-icon-57x57.png" />
-    <Content Include="Images\logo\apple-icon-60x60.png" />
-    <Content Include="Images\logo\apple-icon-72x72.png" />
-    <Content Include="Images\logo\apple-icon-76x76.png" />
-    <Content Include="Images\logo\apple-icon-precomposed.png" />
-    <Content Include="Images\logo\apple-icon.png" />
-    <Content Include="Images\logo\browserconfig.xml" />
-    <Content Include="Images\logo\favicon-16x16.png" />
-    <Content Include="Images\logo\favicon-32x32.png" />
-    <Content Include="Images\logo\favicon-96x96.png" />
-    <Content Include="Images\logo\ms-icon-144x144.png" />
-    <Content Include="Images\logo\ms-icon-150x150.png" />
-    <Content Include="Images\logo\ms-icon-310x310.png" />
-    <Content Include="Images\logo\ms-icon-70x70.png" />
+    <Content Include="Images\logo_text.svg" />
     <Content Include="Images\map.png" />
     <Content Include="Images\testVisible.png" />
+    <Content Include="Images\test_fun.svg" />
+    <Content Include="Images\test_title.svg" />
     <Content Include="Images\專題網頁-24.png" />
     <Content Include="Models\DB\acgDBA.dll" />
     <Content Include="plugin\vuematerial\vue-material.min.css" />
@@ -429,7 +416,6 @@
     <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
     <Content Include="plugin\vuematerial\README.md" />
     <Content Include="Models\DB\EGG_DB.db" />
-    <Content Include="Images\logo\manifest.json" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\County\Index.cshtml" />
     <Content Include="Scripts\county\county.shp" />

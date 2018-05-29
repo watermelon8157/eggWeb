@@ -208,4 +208,5 @@ D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\System.Data.SQLite.Linq.dll
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\Dapper.xml
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\log4net.xml
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\System.Data.SQLite.xml
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\MayaLibrary.dll
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Debug\eggWeb.csprojResolveAssemblyReference.cache
