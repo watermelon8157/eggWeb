@@ -12,6 +12,9 @@
     <File Include="ApplicationInsights.config">
       <publishTime>04/19/2018 21:35:23</publishTime>
     </File>
+    <File Include="App_Data/EGGConfig.ini">
+      <publishTime>05/31/2018 15:08:30</publishTime>
+    </File>
     <File Include="bin/acgDBA.dll">
       <publishTime>10/17/2017 16:07:37</publishTime>
     </File>
@@ -25,7 +28,7 @@
       <publishTime>11/25/2017 18:18:42</publishTime>
     </File>
     <File Include="bin/eggWeb.dll">
-      <publishTime>05/28/2018 22:42:04</publishTime>
+      <publishTime>06/01/2018 20:23:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -35,6 +38,9 @@
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>03/08/2017 19:26:22</publishTime>
+    </File>
+    <File Include="bin/MayaLibrary.dll">
+      <publishTime>09/12/2017 08:28:59</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>12/07/2015 19:04:38</publishTime>
@@ -465,6 +471,12 @@
     <File Include="Images/bot_title.svg">
       <publishTime>05/24/2018 01:25:52</publishTime>
     </File>
+    <File Include="Images/bot_title_bar.png">
+      <publishTime>05/30/2018 21:05:36</publishTime>
+    </File>
+    <File Include="Images/bot_title_bar.svg">
+      <publishTime>05/27/2018 22:11:50</publishTime>
+    </File>
     <File Include="Images/date.png">
       <publishTime>04/28/2018 08:36:14</publishTime>
     </File>
@@ -568,13 +580,31 @@
       <publishTime>05/15/2018 01:18:06</publishTime>
     </File>
     <File Include="Images/event_fun.svg">
-      <publishTime>05/24/2018 01:25:48</publishTime>
+      <publishTime>05/31/2018 18:45:42</publishTime>
     </File>
     <File Include="Images/event_title.svg">
-      <publishTime>05/24/2018 01:25:50</publishTime>
+      <publishTime>05/31/2018 18:45:40</publishTime>
+    </File>
+    <File Include="Images/event_title_bar.png">
+      <publishTime>06/01/2018 19:58:49</publishTime>
+    </File>
+    <File Include="Images/event_title_bar.svg">
+      <publishTime>05/31/2018 18:45:40</publishTime>
     </File>
     <File Include="Images/favicon.ico">
       <publishTime>05/19/2018 00:40:36</publishTime>
+    </File>
+    <File Include="Images/footor.png">
+      <publishTime>06/01/2018 20:18:19</publishTime>
+    </File>
+    <File Include="Images/footor.svg">
+      <publishTime>05/31/2018 18:16:02</publishTime>
+    </File>
+    <File Include="Images/freaze.svg">
+      <publishTime>05/31/2018 18:15:02</publishTime>
+    </File>
+    <File Include="Images/fun.svg">
+      <publishTime>05/31/2018 18:15:00</publishTime>
     </File>
     <File Include="Images/go.png">
       <publishTime>05/16/2018 19:06:31</publishTime>
@@ -599,6 +629,15 @@
     </File>
     <File Include="Images/info_title.svg">
       <publishTime>05/24/2018 01:25:50</publishTime>
+    </File>
+    <File Include="Images/info_title_bar.png">
+      <publishTime>05/30/2018 21:07:49</publishTime>
+    </File>
+    <File Include="Images/info_title_bar.svg">
+      <publishTime>05/27/2018 22:11:50</publishTime>
+    </File>
+    <File Include="Images/LINEBOT.svg">
+      <publishTime>05/30/2018 00:23:56</publishTime>
     </File>
     <File Include="Images/lineBotQRCode.jpg">
       <publishTime>05/19/2018 08:30:11</publishTime>
@@ -699,6 +738,9 @@
     <File Include="Images/map.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
     </File>
+    <File Include="Images/testQRCode.png">
+      <publishTime>05/31/2018 12:28:31</publishTime>
+    </File>
     <File Include="Images/testVisible.png">
       <publishTime>05/15/2018 01:18:06</publishTime>
     </File>
@@ -708,6 +750,12 @@
     <File Include="Images/test_title.svg">
       <publishTime>05/24/2018 01:25:52</publishTime>
     </File>
+    <File Include="Images/test_title_bar.png">
+      <publishTime>05/30/2018 21:02:26</publishTime>
+    </File>
+    <File Include="Images/test_title_bar.svg">
+      <publishTime>05/30/2018 20:58:45</publishTime>
+    </File>
     <File Include="Images/專題網頁-24.png">
       <publishTime>05/15/2018 01:18:16</publishTime>
     </File>
@@ -715,7 +763,7 @@
       <publishTime>10/17/2017 16:07:37</publishTime>
     </File>
     <File Include="Models/DB/EGG_DB.db">
-      <publishTime>05/19/2018 09:24:45</publishTime>
+      <publishTime>06/01/2018 20:51:04</publishTime>
     </File>
     <File Include="packages.config">
       <publishTime>05/15/2018 18:13:09</publishTime>
@@ -765,6 +813,12 @@
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>04/19/2018 21:35:11</publishTime>
     </File>
+    <File Include="Scripts/moment-with-locales.js">
+      <publishTime>09/12/2017 08:28:56</publishTime>
+    </File>
+    <File Include="Scripts/moment.js">
+      <publishTime>09/12/2017 08:28:56</publishTime>
+    </File>
     <File Include="Scripts/vue-resource.common.js">
       <publishTime>04/19/2018 21:40:32</publishTime>
     </File>
@@ -796,7 +850,7 @@
       <publishTime>04/28/2018 06:47:44</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>05/26/2018 17:36:52</publishTime>
+      <publishTime>06/01/2018 20:49:49</publishTime>
     </File>
     <File Include="Views/Home/Index2.cshtml">
       <publishTime>04/28/2018 11:35:55</publishTime>
@@ -808,7 +862,7 @@
       <publishTime>04/19/2018 21:35:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>05/26/2018 14:01:43</publishTime>
+      <publishTime>05/31/2018 03:19:45</publishTime>
     </File>
     <File Include="Views/TEST/Index.cshtml">
       <publishTime>05/05/2018 11:28:00</publishTime>

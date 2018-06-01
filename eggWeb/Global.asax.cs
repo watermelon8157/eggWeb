@@ -21,7 +21,7 @@ namespace eggWeb
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            MvcApplication.global = new Global();
+            //MvcApplication.global = new Global();
 
         }
     }

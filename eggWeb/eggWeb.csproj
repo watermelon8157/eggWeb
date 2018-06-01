@@ -225,17 +225,21 @@
     <Compile Include="Controllers\CountyController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServerController.cs" />
     <Compile Include="Controllers\TESTController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DB\DBLink.cs" />
-    <Compile Include="Models\Global.cs" />
     <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\LogTool.cs" />
+    <Compile Include="Models\IniFile.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\viewmodel\DB.cs" />
+    <Compile Include="Models\SecurityTool.cs" />
+    <Compile Include="Models\SYS.cs" />
+    <Compile Include="Models\LogTool.cs" />
+    <Compile Include="Models\DB\DB.cs" />
+    <Compile Include="Models\viewmodel\VM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -302,6 +306,8 @@
     <Content Include="Images\botVisible.png" />
     <Content Include="Images\bot_fun.svg" />
     <Content Include="Images\bot_title.svg" />
+    <Content Include="Images\bot_title_bar.png" />
+    <Content Include="Images\bot_title_bar.svg" />
     <Content Include="Images\date.png" />
     <Content Include="Images\egg.png" />
     <Content Include="Images\egg_data.png" />
@@ -338,7 +344,13 @@
     <Content Include="Images\EVENT\1_9.jpg" />
     <Content Include="Images\event_fun.svg" />
     <Content Include="Images\event_title.svg" />
+    <Content Include="Images\event_title_bar.png" />
+    <Content Include="Images\event_title_bar.svg" />
     <Content Include="Images\favicon.ico" />
+    <Content Include="Images\footor.png" />
+    <Content Include="Images\footor.svg" />
+    <Content Include="Images\freaze.svg" />
+    <Content Include="Images\fun.svg" />
     <Content Include="Images\go.png" />
     <Content Include="Images\go.svg" />
     <Content Include="Images\happy.png" />
@@ -347,6 +359,9 @@
     <Content Include="Images\infoVisible.png" />
     <Content Include="Images\info_fun.svg" />
     <Content Include="Images\info_title.svg" />
+    <Content Include="Images\info_title_bar.png" />
+    <Content Include="Images\info_title_bar.svg" />
+    <Content Include="Images\LINEBOT.svg" />
     <Content Include="Images\lineBotQRCode.jpg" />
     <Content Include="Images\lineBotQRCode.png" />
     <Content Include="Images\logo.png" />
@@ -354,10 +369,12 @@
     <Content Include="Images\logo2.png" />
     <Content Include="Images\logo_text.svg" />
     <Content Include="Images\map.png" />
+    <Content Include="Images\testQRCode.png" />
     <Content Include="Images\testVisible.png" />
     <Content Include="Images\test_fun.svg" />
     <Content Include="Images\test_title.svg" />
-    <Content Include="Images\專題網頁-24.png" />
+    <Content Include="Images\test_title_bar.png" />
+    <Content Include="Images\test_title_bar.svg" />
     <Content Include="Models\DB\acgDBA.dll" />
     <Content Include="plugin\vuematerial\vue-material.min.css" />
     <Content Include="plugin\vuematerial\vue-material.min.js" />
@@ -372,6 +389,8 @@
     <Content Include="Scripts\materialize.js" />
     <Content Include="Scripts\materialize.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\vue-resource.common.js" />
     <Content Include="Scripts\vue-resource.es2015.js" />
     <Content Include="Scripts\vue-resource.js" />
@@ -393,8 +412,8 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Views\DaTa\" />
+    <Folder Include="Views\Server\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -416,6 +435,7 @@
     <Content Include="Content\fontawesome-free-5.0.10\web-fonts-with-css\webfonts\fa-solid-900.woff2" />
     <Content Include="plugin\vuematerial\README.md" />
     <Content Include="Models\DB\EGG_DB.db" />
+    <Content Include="App_Data\EGGConfig.ini" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\County\Index.cshtml" />
     <Content Include="Scripts\county\county.shp" />

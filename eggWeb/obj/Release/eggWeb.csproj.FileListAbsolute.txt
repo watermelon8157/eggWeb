@@ -208,3 +208,4 @@ D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\zh-Hant\Microsoft.Owin.Security
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Release\eggWeb.csprojResolveAssemblyReference.cache
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Release\eggWeb.dll
 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\obj\Release\eggWeb.pdb
+D:\北醫\0_專題小組\Final\eggWeb\eggWeb\bin\MayaLibrary.dll

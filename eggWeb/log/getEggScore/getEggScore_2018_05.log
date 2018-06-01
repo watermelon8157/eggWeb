@@ -1,0 +1,23 @@
+[2018-05-30 16:30:56 LAPTOP-FTSVPG1L] Fatal 並未將物件參考設定為物件的執行個體。
+   於 Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   於 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   於 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   於 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   於 eggWeb.Controllers.DataController.getEggScore(EGG_TEST_INFO& pData) 於 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\Controllers\DataController.cs: 行 287
+
+[2018-05-30 16:37:29 LAPTOP-FTSVPG1L] Fatal An enumerable sequence of parameters (arrays, lists, etc) is not allowed in this context
+   於 Dapper.SqlMapper.GetCacheInfo(Identity identity, Object exampleParameters, Boolean addToCache)
+   於 Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   於 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   於 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   於 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   於 eggWeb.Controllers.DataController.getEggScore(EGG_TEST_INFO& pData) 於 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\Controllers\DataController.cs: 行 289
+
+[2018-05-30 16:41:10 LAPTOP-FTSVPG1L] Fatal An enumerable sequence of parameters (arrays, lists, etc) is not allowed in this context
+   於 Dapper.SqlMapper.GetCacheInfo(Identity identity, Object exampleParameters, Boolean addToCache)
+   於 Dapper.SqlMapper.<QueryImpl>d__136`1.MoveNext()
+   於 System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   於 System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   於 Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType)
+   於 eggWeb.Controllers.DataController.getEggScore(EGG_TEST_INFO& pData)
+

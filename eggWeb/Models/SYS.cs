@@ -71,4 +71,25 @@ namespace eggWeb.Models
 
 
     }
+
+    /// <summary>
+    /// 系統設定
+    /// </summary>
+    public class EGG_SYS_PARAMS: DB_EGG_SYS_PARAMS
+    {
+        #region Method
+
+        public string getSYS_SQL(List<string> pModel)
+        {
+            string _sql = "SELECT * FROM EGG_SYS_PARAMS";
+            if (pModel.Count > 0)
+            {
+                _sql += " WHERE S_MODEL in @S_MODEL";
+            }
+            return _sql;
+        }
+
+        #endregion
+
+    }
 }

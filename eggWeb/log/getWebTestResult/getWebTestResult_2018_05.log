@@ -1,0 +1,15 @@
+[2018-05-31 14:01:51 LAPTOP-FTSVPG1L] Fatal 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Skip[TSource](IEnumerable`1 source, Int32 count)
+   於 eggWeb.Controllers.DataController.getWebTestResult(EGG_TEST_INFO pData) 於 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\Controllers\DataController.cs: 行 472
+
+[2018-05-31 14:02:44 LAPTOP-FTSVPG1L] Fatal 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Skip[TSource](IEnumerable`1 source, Int32 count)
+   於 eggWeb.Controllers.DataController.getWebTestResult(EGG_TEST_INFO pData) 於 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\Controllers\DataController.cs: 行 472
+
+[2018-05-31 14:05:35 LAPTOP-FTSVPG1L] Fatal 值不能為 null。
+參數名稱: source
+   於 System.Linq.Enumerable.Skip[TSource](IEnumerable`1 source, Int32 count)
+   於 eggWeb.Controllers.DataController.getWebTestResult(EGG_TEST_INFO pData) 於 D:\北醫\0_專題小組\Final\eggWeb\eggWeb\Controllers\DataController.cs: 行 477
+
